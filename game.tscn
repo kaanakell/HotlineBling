@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://vib37a3t14eg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwb40"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="WeaponSystem" type="Node" parent="Managers"]
+
+[node name="IWeapon" type="Node" parent="Managers/WeaponSystem"]
+
+[node name="BaseWeapon" type="Node" parent="Managers/WeaponSystem"]
+
+[node name="WeaponFactory" type="Node" parent="Managers/WeaponSystem"]
+
+[node name="WeaponManager" type="Node" parent="Managers/WeaponSystem"]
+
+[node name="ScoreSystem" type="Node" parent="Managers"]
+
+[node name="IScoringRule" type="Node" parent="Managers/ScoreSystem"]
+
+[node name="DefaultScoringRule" type="Node" parent="Managers/ScoreSystem"]
+
+[node name="ScoreManager" type="Node" parent="Managers/ScoreSystem"]
+
+[node name="EnemySystem" type="Node" parent="Managers"]
+
+[node name="IEnemy" type="Node" parent="Managers/EnemySystem"]
+
+[node name="Enemy" type="Node" parent="Managers/EnemySystem"]
+
+[node name="SpawnSystem" type="Node" parent="Managers"]
+
+[node name="SpawnManager" type="Node" parent="Managers/SpawnSystem"]
+
+[node name="Player" type="Node" parent="."]
+
+[node name="PlayerController" type="CharacterBody2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerController"]
+shape = SubResource("CircleShape2D_mwb40")
+
+[node name="PlayerHealth" type="Node" parent="Player"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UIWeaponDisplay" type="TextureRect" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UIDiceEffect" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="UIScoreDisplay" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
