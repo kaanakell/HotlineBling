@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://bws54gamjx2xd"]
+
+[ext_resource type="Texture2D" uid="uid://clqrglwdtng1x" path="res://UI pack/BkAS 1.png" id="1_kenku"]
+[ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_onc8m"]
+[ext_resource type="Texture2D" uid="uid://bkta2ulgucfh7" path="res://UI pack/tile_100.png" id="3_cwbuu"]
+[ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="4_4v80v"]
+
+[node name="inGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PopupMenu" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -0.00012207031
+offset_bottom = -207.44006
+
+[node name="TextureRect" type="TextureRect" parent="PopupMenu"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+texture = ExtResource("1_kenku")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TitleContainer" type="MarginContainer" parent="PopupMenu"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GameTitle" type="Label" parent="PopupMenu/TitleContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.96862745, 0.39607844, 0.72156864, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0.9764706, 0.5529412, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_font_sizes/font_size = 160
+text = "HOTLINEBLING
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BasicMenuScreen" type="MarginContainer" parent="PopupMenu"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PopupMenu/BasicMenuScreen"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 810.0
+offset_top = 625.0
+offset_right = 1110.0
+offset_bottom = 985.0
+
+[node name="Start" type="TextureRect" parent="VBoxContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+texture = ExtResource("3_cwbuu")
+
+[node name="Label" type="Label" parent="VBoxContainer/Start"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_top = 6.0
+offset_right = 300.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
+theme_override_fonts/font = ExtResource("4_4v80v")
+theme_override_font_sizes/font_size = 50
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureRect" parent="VBoxContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+texture = ExtResource("3_cwbuu")
+
+[node name="Label" type="Label" parent="VBoxContainer/Settings"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_top = 6.0
+offset_right = 300.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
+theme_override_fonts/font = ExtResource("4_4v80v")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureRect" parent="VBoxContainer"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+texture = ExtResource("3_cwbuu")
+
+[node name="Label" type="Label" parent="VBoxContainer/Quit"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_top = 6.0
+offset_right = 300.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
+theme_override_fonts/font = ExtResource("4_4v80v")
+theme_override_font_sizes/font_size = 50
+text = "QUIT
+"
+horizontal_alignment = 1
+vertical_alignment = 1

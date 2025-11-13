@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=3 format=3 uid="uid://vib37a3t14eg"]
+
+[ext_resource type="PackedScene" uid="uid://bws54gamjx2xd" path="res://in_game_ui.tscn" id="1_80nbo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwb40"]
 
@@ -44,6 +46,8 @@ shape = SubResource("CircleShape2D_mwb40")
 [node name="PlayerHealth" type="Node" parent="Player"]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="inGameUI" parent="UI" instance=ExtResource("1_80nbo")]
 
 [node name="UIWeaponDisplay" type="TextureRect" parent="UI"]
 offset_right = 40.0
