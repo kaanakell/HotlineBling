@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj8wgdshi3xr2"]
+
+[ext_resource type="PackedScene" uid="uid://bws54gamjx2xd" path="res://Scenes/in_game_ui.tscn" id="1_06t4h"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuUI" parent="CanvasLayer" instance=ExtResource("1_06t4h")]
