@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bws54gamjx2xd"]
+[gd_scene load_steps=9 format=3 uid="uid://uyy7fprbbp5"]
 
 [ext_resource type="Texture2D" uid="uid://clqrglwdtng1x" path="res://UI pack/BkAS 1.png" id="1_kenku"]
 [ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_onc8m"]
 [ext_resource type="Texture2D" uid="uid://bkta2ulgucfh7" path="res://UI pack/tile_100.png" id="3_cwbuu"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="4_4v80v"]
+[ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scenes/start_button.gd" id="4_orthm"]
+[ext_resource type="Script" uid="uid://db0xr5pjwmbpp" path="res://Scenes/settings_button.gd" id="6_2ovgp"]
+[ext_resource type="Script" uid="uid://b4goatiwdrnvt" path="res://Scenes/quit_button.gd" id="7_dfbn1"]
 
 [sub_resource type="Theme" id="Theme_cwbuu"]
 
@@ -13,7 +16,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PopupMenu" type="MarginContainer" parent="."]
+[node name="MainMenu" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 anchors_preset = -1
@@ -22,20 +25,20 @@ anchor_bottom = 1.0
 offset_right = -0.00012207031
 offset_bottom = -207.44006
 
-[node name="TextureRect" type="TextureRect" parent="PopupMenu"]
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
 texture = ExtResource("1_kenku")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="TitleContainer" type="MarginContainer" parent="PopupMenu"]
+[node name="TitleContainer" type="MarginContainer" parent="MainMenu"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="GameTitle" type="Label" parent="PopupMenu/TitleContainer"]
+[node name="GameTitle" type="Label" parent="MainMenu/TitleContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -50,10 +53,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BasicMenuScreen" type="MarginContainer" parent="PopupMenu"]
+[node name="BasicMenuScreen" type="MarginContainer" parent="MainMenu"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="PopupMenu/BasicMenuScreen"]
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/BasicMenuScreen"]
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -71,6 +74,13 @@ custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme = SubResource("Theme_cwbuu")
 texture = ExtResource("3_cwbuu")
+
+[node name="StartButton" type="Button" parent="VBoxContainer/Start"]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 300.0
+offset_bottom = 106.0
+script = ExtResource("4_orthm")
 
 [node name="Label" type="Label" parent="VBoxContainer/Start"]
 custom_minimum_size = Vector2(30, 30)
@@ -91,6 +101,12 @@ texture_repeat = 1
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 texture = ExtResource("3_cwbuu")
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/Settings"]
+layout_mode = 0
+offset_right = 302.0
+offset_bottom = 65.0
+script = ExtResource("6_2ovgp")
 
 [node name="Label" type="Label" parent="VBoxContainer/Settings"]
 custom_minimum_size = Vector2(30, 30)
@@ -113,12 +129,18 @@ custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 texture = ExtResource("3_cwbuu")
 
+[node name="QuitButton" type="Button" parent="VBoxContainer/Quit"]
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 66.0
+script = ExtResource("7_dfbn1")
+
 [node name="Label" type="Label" parent="VBoxContainer/Quit"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 0
 offset_top = 6.0
 offset_right = 300.0
-offset_bottom = 66.0
+offset_bottom = 125.0
 theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
 theme_override_fonts/font = ExtResource("4_4v80v")
 theme_override_font_sizes/font_size = 50
