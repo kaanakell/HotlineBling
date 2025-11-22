@@ -76,10 +76,11 @@ theme = SubResource("Theme_cwbuu")
 texture = ExtResource("3_cwbuu")
 
 [node name="StartButton" type="Button" parent="VBoxContainer/Start"]
+show_behind_parent = true
 layout_mode = 0
 offset_top = 6.0
 offset_right = 300.0
-offset_bottom = 106.0
+offset_bottom = 70.0
 script = ExtResource("4_orthm")
 
 [node name="Label" type="Label" parent="VBoxContainer/Start"]
@@ -103,9 +104,10 @@ layout_mode = 2
 texture = ExtResource("3_cwbuu")
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer/Settings"]
+show_behind_parent = true
 layout_mode = 0
 offset_right = 302.0
-offset_bottom = 65.0
+offset_bottom = 63.175
 script = ExtResource("6_2ovgp")
 
 [node name="Label" type="Label" parent="VBoxContainer/Settings"]
@@ -113,7 +115,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 0
 offset_top = 6.0
 offset_right = 300.0
-offset_bottom = 66.0
+offset_bottom = 125.0
 theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
 theme_override_fonts/font = ExtResource("4_4v80v")
 theme_override_font_sizes/font_size = 50
@@ -130,6 +132,7 @@ layout_mode = 2
 texture = ExtResource("3_cwbuu")
 
 [node name="QuitButton" type="Button" parent="VBoxContainer/Quit"]
+show_behind_parent = true
 layout_mode = 0
 offset_right = 304.0
 offset_bottom = 66.0

@@ -3,7 +3,6 @@ using System;
 
 public interface IEnemy
 {
-    float MaxHealth { get; }
-    void ApplyDamage(float damage);
+	float MaxHealth { get; }
+	void ApplyDamage(float damage);
 }
-

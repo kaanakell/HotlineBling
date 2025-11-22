@@ -1,7 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj8wgdshi3xr2"]
+[gd_scene load_steps=5 format=3 uid="uid://clpvl5fk5y47h"]
 
-[ext_resource type="Texture2D" uid="uid://clqrglwdtng1x" path="res://UI pack/BkAS 1.png" id="1_ce3w2"]
-[ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_n45e2"]
 [ext_resource type="Texture2D" uid="uid://bkta2ulgucfh7" path="res://UI pack/tile_100.png" id="3_opfnp"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="4_cp0ys"]
 [ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scenes/start_button.gd" id="4_n45e2"]
@@ -25,33 +23,11 @@ anchor_bottom = 1.0
 offset_right = -0.00012207031
 offset_bottom = -207.44006
 
-[node name="TextureRect" type="TextureRect" parent="MainMenu"]
-custom_minimum_size = Vector2(1920, 1080)
-layout_mode = 2
-texture = ExtResource("1_ce3w2")
-expand_mode = 1
-stretch_mode = 6
-
 [node name="TitleContainer" type="MarginContainer" parent="MainMenu"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="GameTitle" type="Label" parent="MainMenu/TitleContainer"]
-custom_minimum_size = Vector2(1, 1)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.96862745, 0.39607844, 0.72156864, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0.9764706, 0.5529412, 0.7882353, 1)
-theme_override_fonts/font = ExtResource("2_n45e2")
-theme_override_font_sizes/font_size = 160
-text = "HOTLINEBLING
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="BasicMenuScreen" type="MarginContainer" parent="MainMenu"]
 layout_mode = 2
@@ -79,7 +55,6 @@ texture = ExtResource("3_opfnp")
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-text = "StartButton"
 script = ExtResource("4_n45e2")
 
 [node name="Label" type="Label" parent="VBoxContainer/Start/StartButton"]
