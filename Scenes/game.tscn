@@ -1,77 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=16 format=3 uid="uid://vib37a3t14eg"]
 
-[ext_resource type="Script" uid="uid://dr6a413b4fwks" path="res://Scenes/WeaponManager.cs" id="4_1phco"]
-[ext_resource type="Texture2D" uid="uid://dkdwfp27guodl" path="res://Sprites/The Female Adventurer - Free/Idle/Idle.png" id="4_i6g32"]
-[ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scenes/ScoreManager.cs" id="7_ewbju"]
-[ext_resource type="Script" uid="uid://bmwrhkpnxmf20" path="res://Scenes/Enemy.cs" id="9_iivbl"]
-[ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scenes/PlayerController.cs" id="10_7nbq1"]
+[ext_resource type="PackedScene" uid="uid://cha6bmtlawqw0" path="res://Scenes/Enemy.tscn" id="3_wowpa"]
+[ext_resource type="Script" uid="uid://dr6a413b4fwks" path="res://Scripts/WeaponManager.cs" id="4_1phco"]
+[ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
+[ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/PlayerController.cs" id="10_7nbq1"]
 [ext_resource type="Texture2D" uid="uid://b3fig2efugt2e" path="res://Sprites/The Male adventurer - Free/Idle/idle.png" id="11_exi56"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7t8sx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1l0tm"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(0, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v158k"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(48, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h4fw4"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(96, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldgsr"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(144, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5yvi"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(192, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rku1e"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(240, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfjv2"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(288, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1phco"]
-atlas = ExtResource("4_i6g32")
-region = Rect2(336, 0, 48, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nb51f"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1l0tm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v158k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h4fw4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ldgsr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o5yvi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rku1e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rfjv2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1phco")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwb40"]
 
@@ -155,18 +88,8 @@ script = ExtResource("7_ewbju")
 
 [node name="EnemySystem" type="Node" parent="Managers"]
 
-[node name="Enemy" type="CharacterBody2D" parent="Managers/EnemySystem"]
+[node name="Enemy" parent="Managers/EnemySystem" instance=ExtResource("3_wowpa")]
 position = Vector2(229, 137)
-script = ExtResource("9_iivbl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Managers/EnemySystem/Enemy"]
-scale = Vector2(2, 2)
-shape = SubResource("CircleShape2D_7t8sx")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Managers/EnemySystem/Enemy"]
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_nb51f")
-autoplay = "default"
 
 [node name="SpawnSystem" type="Node" parent="Managers"]
 

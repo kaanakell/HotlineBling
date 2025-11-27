@@ -1,5 +1,13 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+
+public struct FireResult
+{
+	public bool Hit;
+	public Node2D HitEntity;
+	public List<Vector2> BulletEndPoints;
+}
 
 public interface IWeapon
 {
@@ -11,6 +19,12 @@ public interface IWeapon
 	float Range { get; }
 	float ScoreMultiplier { get; }
 	string AmmoText { get; }
-	bool Fire(Node2D shooter, Vector2 direction);   // ← now returns bool for accuracy
-	void Reload();
+	float MaxSpreadDeg { get; }
+	float RecoilPerShotDeg { get; }
+	float RecoilRecoverySpeed { get; }
+	bool IsReloading { get; }
+	float CurrentSpread { get; }
+	FireResult Fire(Node2D shooter, Vector2 direction);
+	void Reload(Node context);
+	void Update(double delta);
 }

@@ -4,9 +4,9 @@ using System;
 public partial class WeaponManager : Node
 {
 	[Signal]
-	public delegate void WeaponChangedEventHandler(BaseWeapon newWeapon); // ← concrete type
+	public delegate void WeaponChangedEventHandler(BaseWeapon newWeapon);
 
-	[Export] public float RotationInterval = 60f;
+	[Export] public float RotationInterval = 5f;
 
 	private Timer _rotationTimer;
 	private WeaponFactory _factory = new();

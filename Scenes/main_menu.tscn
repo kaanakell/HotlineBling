@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bkta2ulgucfh7" path="res://UI pack/tile_100.png" id="3_opfnp"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="4_cp0ys"]
-[ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scenes/start_button.gd" id="4_n45e2"]
+[ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scripts/start_button.gd" id="4_n45e2"]
 
 [sub_resource type="Theme" id="Theme_cwbuu"]
 
