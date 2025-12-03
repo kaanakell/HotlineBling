@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cha6bmtlawqw0"]
 
 [ext_resource type="Script" uid="uid://bmwrhkpnxmf20" path="res://Scripts/Enemy.cs" id="1_wovta"]
-[ext_resource type="Texture2D" uid="uid://dkdwfp27guodl" path="res://Sprites/The Female Adventurer - Free/Idle/Idle.png" id="2_xeo28"]
+[ext_resource type="Texture2D" uid="uid://dkdwfp27guodl" path="res://Scenes/Sprites/The Female Adventurer - Free/Idle/Idle.png" id="2_xeo28"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7t8sx"]
 
