@@ -1,0 +1,172 @@
+[gd_scene load_steps=17 format=3 uid="uid://cn4qxld8prynl"]
+
+[ext_resource type="Texture2D" uid="uid://caxfnk87uakiu" path="res://UI pack/Settings.png" id="1_w1nw0"]
+[ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_flfri"]
+[ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="2_yrknh"]
+[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scenes/volup.gd" id="3_646k0"]
+[ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="3_mjqtt"]
+[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scenes/voldown.gd" id="4_efosg"]
+[ext_resource type="Script" uid="uid://6m2jfs1ublmx" path="res://Scenes/resume.gd" id="4_ppjuv"]
+[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scenes/restart.gd" id="5_ipgag"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrknh"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(793, 3349, 563, 567)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_646k0"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(786, 3348, 564, 566)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjqtt"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(1497, 3359, 557, 552)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_efosg"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(1495, 3355, 562, 559)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1nw0"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(2159, 3090, 1282, 474)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4eoc7"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(2167, 3097, 1263, 460)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppjuv"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(2164, 3100, 1269, 459)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74x7w"]
+texture = ExtResource("2_yrknh")
+region_rect = Rect2(2163, 3087, 1273, 472)
+
+[node name="Settings" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_w1nw0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1180, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.47300002
+anchor_bottom = 0.96400005
+offset_right = -0.14001465
+offset_bottom = -3.0517578e-05
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Volup" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_yrknh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_646k0")
+script = ExtResource("3_646k0")
+
+[node name="Voldown" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_mjqtt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_efosg")
+script = ExtResource("4_efosg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="resume" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mjqtt")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1nw0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4eoc7")
+text = "RESUME"
+script = ExtResource("4_ppjuv")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="restart" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3"]
+visibility_layer = 2
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.67058825, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mjqtt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ppjuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_74x7w")
+text = "RESTART"
+script = ExtResource("5_ipgag")
+
+[node name="seperation" type="Control" parent="MarginContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(10, 200)
+layout_mode = 2
+
+[node name="Pause(Title)" type="Label" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 180.0
+offset_right = 1150.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0.09411765, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_flfri")
+theme_override_font_sizes/font_size = 150
+text = "Pause"

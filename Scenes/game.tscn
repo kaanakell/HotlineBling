@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=17 format=3 uid="uid://vib37a3t14eg"]
 
+[ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scenes/pausegame.gd" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://cha6bmtlawqw0" path="res://Scenes/Enemy.tscn" id="3_wowpa"]
 [ext_resource type="Script" uid="uid://dr6a413b4fwks" path="res://Scripts/WeaponManager.cs" id="4_1phco"]
 [ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
@@ -73,6 +74,9 @@ animations = [{
 }]
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_i6g32")
 
 [node name="Managers" type="Node" parent="."]
 

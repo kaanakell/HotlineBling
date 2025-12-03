@@ -1,14 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://uyy7fprbbp5"]
+[gd_scene load_steps=15 format=3 uid="uid://uyy7fprbbp5"]
 
 [ext_resource type="Texture2D" uid="uid://clqrglwdtng1x" path="res://UI pack/BkAS 1.png" id="1_kenku"]
 [ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_onc8m"]
 [ext_resource type="Texture2D" uid="uid://bkta2ulgucfh7" path="res://UI pack/tile_100.png" id="3_cwbuu"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="4_4v80v"]
 [ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scripts/start_button.gd" id="4_orthm"]
-[ext_resource type="Script" uid="uid://db0xr5pjwmbpp" path="res://Scripts/settings_button.gd" id="6_2ovgp"]
 [ext_resource type="Script" uid="uid://b4goatiwdrnvt" path="res://Scripts/quit_button.gd" id="7_dfbn1"]
+[ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="7_s8663"]
+[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scenes/volup.gd" id="8_cpmi5"]
+[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scenes/voldown.gd" id="9_6ra50"]
 
 [sub_resource type="Theme" id="Theme_cwbuu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_canx1"]
+texture = ExtResource("7_s8663")
+region_rect = Rect2(793, 3349, 563, 567)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8663"]
+texture = ExtResource("7_s8663")
+region_rect = Rect2(796, 3362, 547, 544)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ybrcd"]
+texture = ExtResource("7_s8663")
+region_rect = Rect2(1497, 3359, 557, 552)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpmi5"]
+texture = ExtResource("7_s8663")
+region_rect = Rect2(1492, 3353, 560, 564)
 
 [node name="inGameUI" type="Control"]
 layout_mode = 3
@@ -20,10 +38,10 @@ offset_bottom = 40.0
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 48.000004
+anchor_bottom = 27.000002
 offset_right = -0.00012207031
-offset_bottom = -207.44006
+offset_bottom = -0.00012207031
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -53,12 +71,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BasicMenuScreen" type="MarginContainer" parent="MainMenu"]
-layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/BasicMenuScreen"]
-layout_mode = 2
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 0
@@ -66,6 +78,7 @@ offset_left = 810.0
 offset_top = 625.0
 offset_right = 1110.0
 offset_bottom = 985.0
+theme_override_constants/separation = 20
 
 [node name="Start" type="TextureRect" parent="VBoxContainer"]
 texture_filter = 1
@@ -96,34 +109,6 @@ text = "START"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings" type="TextureRect" parent="VBoxContainer"]
-texture_filter = 1
-texture_repeat = 1
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-texture = ExtResource("3_cwbuu")
-
-[node name="SettingsButton" type="Button" parent="VBoxContainer/Settings"]
-show_behind_parent = true
-layout_mode = 0
-offset_right = 302.0
-offset_bottom = 63.175
-script = ExtResource("6_2ovgp")
-
-[node name="Label" type="Label" parent="VBoxContainer/Settings"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 0
-offset_top = 6.0
-offset_right = 300.0
-offset_bottom = 125.0
-theme_override_colors/font_color = Color(0.15294118, 0.99215686, 0.99607843, 1)
-theme_override_fonts/font = ExtResource("4_4v80v")
-theme_override_font_sizes/font_size = 50
-text = "SETTINGS
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Quit" type="TextureRect" parent="VBoxContainer"]
 texture_filter = 1
 texture_repeat = 1
@@ -151,3 +136,33 @@ text = "QUIT
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Volup" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_canx1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s8663")
+script = ExtResource("8_cpmi5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 23.35
+anchor_top = 20.0
+anchor_right = 25.2
+anchor_bottom = 21.7
+offset_left = 96.0
+offset_top = -6.0
+offset_right = 104.0
+offset_bottom = 7.0
+
+[node name="Voldown" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ybrcd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cpmi5")
+script = ExtResource("9_6ra50")
