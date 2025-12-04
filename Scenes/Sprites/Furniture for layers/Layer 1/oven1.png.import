@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0ih1l4blcx0h"
-path="res://.godot/imported/bed3.png-c8a3216651e0702f9df0ee4a4817d9cf.ctex"
+uid="uid://cpof48clawytf"
+path="res://.godot/imported/oven1.png-bb0fa05091c4b6fa183a4e28ec33e95f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/bed3.png"
-dest_files=["res://.godot/imported/bed3.png-c8a3216651e0702f9df0ee4a4817d9cf.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer 1/oven1.png"
+dest_files=["res://.godot/imported/oven1.png-bb0fa05091c4b6fa183a4e28ec33e95f.ctex"]
 
 [params]
 

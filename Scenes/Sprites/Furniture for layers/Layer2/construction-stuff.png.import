@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nrwma3jgj6iq"
-path="res://.godot/imported/oven2.png-5934ea7068d01347798682fe2e51afea.ctex"
+uid="uid://drboc11titu5p"
+path="res://.godot/imported/construction-stuff.png-e2b5af3a46d3f9df3ed3c57ba573d20d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/oven2.png"
-dest_files=["res://.godot/imported/oven2.png-5934ea7068d01347798682fe2e51afea.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/construction-stuff.png"
+dest_files=["res://.godot/imported/construction-stuff.png-e2b5af3a46d3f9df3ed3c57ba573d20d.ctex"]
 
 [params]
 

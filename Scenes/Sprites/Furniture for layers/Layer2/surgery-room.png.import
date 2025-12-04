@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4j1yrxl6636j"
-path="res://.godot/imported/big sofa.png-18336ec1241890e311f02439fcd86fa0.ctex"
+uid="uid://djmkneksspduu"
+path="res://.godot/imported/surgery-room.png-34f941f05a9762ea89c2ee75e593c792.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/big sofa.png"
-dest_files=["res://.godot/imported/big sofa.png-18336ec1241890e311f02439fcd86fa0.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/surgery-room.png"
+dest_files=["res://.godot/imported/surgery-room.png-34f941f05a9762ea89c2ee75e593c792.ctex"]
 
 [params]
 

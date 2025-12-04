@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsvgnangalhai"
-path="res://.godot/imported/sofa2.png-a72bc1d55189fef6086dfc5d4a6e450c.ctex"
+uid="uid://c1g6nnqfbo4q3"
+path="res://.godot/imported/desk.png-915805c02921c73d7c82ffb6a7cd60dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/sofa2.png"
-dest_files=["res://.godot/imported/sofa2.png-a72bc1d55189fef6086dfc5d4a6e450c.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer 1/desk.png"
+dest_files=["res://.godot/imported/desk.png-915805c02921c73d7c82ffb6a7cd60dd.ctex"]
 
 [params]
 

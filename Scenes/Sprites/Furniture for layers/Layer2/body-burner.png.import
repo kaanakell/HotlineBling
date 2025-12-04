@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1g6nnqfbo4q3"
-path="res://.godot/imported/desk.png-7f431a5ecb6bbb8716dca8da178ff78b.ctex"
+uid="uid://1x3vkiqp7338"
+path="res://.godot/imported/body-burner.png-e88a451f3290ae787d9672ced125bd93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/desk.png"
-dest_files=["res://.godot/imported/desk.png-7f431a5ecb6bbb8716dca8da178ff78b.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/body-burner.png"
+dest_files=["res://.godot/imported/body-burner.png-e88a451f3290ae787d9672ced125bd93.ctex"]
 
 [params]
 

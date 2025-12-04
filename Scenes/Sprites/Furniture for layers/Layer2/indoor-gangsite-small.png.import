@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tqfpeqi5m60m"
-path="res://.godot/imported/plant3.png-1e92feb6d4146f80e54141ae42f36395.ctex"
+uid="uid://dxuhmvrd1dny3"
+path="res://.godot/imported/indoor-gangsite-small.png-c8ca775135bd9c507f79451da9665599.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/plant3.png"
-dest_files=["res://.godot/imported/plant3.png-1e92feb6d4146f80e54141ae42f36395.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/indoor-gangsite-small.png"
+dest_files=["res://.godot/imported/indoor-gangsite-small.png-c8ca775135bd9c507f79451da9665599.ctex"]
 
 [params]
 

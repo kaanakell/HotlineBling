@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxvm88nv0baxh"
-path="res://.godot/imported/sofa1.png-4871ba643f28e8a954895908e34de394.ctex"
+uid="uid://mer4lo121la3"
+path="res://.godot/imported/laser-door.png-997fe5484ed1bc9ca244473b14f4c757.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/sofa1.png"
-dest_files=["res://.godot/imported/sofa1.png-4871ba643f28e8a954895908e34de394.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/laser-door.png"
+dest_files=["res://.godot/imported/laser-door.png-997fe5484ed1bc9ca244473b14f4c757.ctex"]
 
 [params]
 

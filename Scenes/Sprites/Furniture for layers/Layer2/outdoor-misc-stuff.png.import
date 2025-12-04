@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://106n56nvn8is"
-path="res://.godot/imported/plant1.png-b2e7937c1588eee01a910f3bc7566ca7.ctex"
+uid="uid://bktdqkgeulcrg"
+path="res://.godot/imported/outdoor-misc-stuff.png-83b7676352832053fe24efd7c32efeeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/plant1.png"
-dest_files=["res://.godot/imported/plant1.png-b2e7937c1588eee01a910f3bc7566ca7.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/outdoor-misc-stuff.png"
+dest_files=["res://.godot/imported/outdoor-misc-stuff.png-83b7676352832053fe24efd7c32efeeb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddfl3p57ule5d"
-path="res://.godot/imported/table.png-ad9012c5824ad43f609c89024905d15b.ctex"
+uid="uid://eihelntc7idi"
+path="res://.godot/imported/cabinet.png-750170f89a72b346b137a04293a64f98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/table.png"
-dest_files=["res://.godot/imported/table.png-ad9012c5824ad43f609c89024905d15b.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer 1/cabinet.png"
+dest_files=["res://.godot/imported/cabinet.png-750170f89a72b346b137a04293a64f98.ctex"]
 
 [params]
 

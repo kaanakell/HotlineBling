@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wn5gdfpo21yt"
-path="res://.godot/imported/bed.png-9bd735c267a2babd0c678d2e4ead826e.ctex"
+uid="uid://flewc7m42nkx"
+path="res://.godot/imported/bench.png-dea64999d6b22b8e8bff6dfd36b94552.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Sprites/furniture/Furniture for layers/bed.png"
-dest_files=["res://.godot/imported/bed.png-9bd735c267a2babd0c678d2e4ead826e.ctex"]
+source_file="res://Scenes/Sprites/Furniture for layers/Layer2/bench.png"
+dest_files=["res://.godot/imported/bench.png-dea64999d6b22b8e8bff6dfd36b94552.ctex"]
 
 [params]
 
