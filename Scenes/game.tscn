@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=4 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=183 format=4 uid="uid://vib37a3t14eg"]
 
 [ext_resource type="Texture2D" uid="uid://dgvv5sm6ivnpt" path="res://UI pack/housetileset.png" id="1_1l0tm"]
 [ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scenes/pausegame.gd" id="1_i6g32"]
@@ -13,9 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://0ih1l4blcx0h" path="res://Scenes/Sprites/Furniture for layers/Layer 1/bed3.png" id="5_1phco"]
 [ext_resource type="Texture2D" uid="uid://flewc7m42nkx" path="res://Scenes/Sprites/Furniture for layers/Layer2/bench.png" id="5_f3c8l"]
 [ext_resource type="Texture2D" uid="uid://eihelntc7idi" path="res://Scenes/Sprites/Furniture for layers/Layer 1/cabinet.png" id="6_7nbq1"]
+[ext_resource type="Script" uid="uid://bve8qaqro6d5e" path="res://Scenes/gate.gd" id="7_bu0y5"]
 [ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
 [ext_resource type="Texture2D" uid="uid://bo0wwal3683t3" path="res://Scenes/Sprites/Furniture for layers/Layer 1/shelf.png" id="7_exi56"]
 [ext_resource type="Texture2D" uid="uid://b4j1yrxl6636j" path="res://Scenes/Sprites/Furniture for layers/Layer 1/big sofa.png" id="8_7t8sx"]
+[ext_resource type="Script" uid="uid://b8qdjpek2iwf7" path="res://Scenes/transitiontrigger.gd" id="8_vs120"]
 [ext_resource type="Texture2D" uid="uid://bxvm88nv0baxh" path="res://Scenes/Sprites/Furniture for layers/Layer 1/sofa1.png" id="9_mg4q0"]
 [ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/PlayerController.cs" id="10_7nbq1"]
 [ext_resource type="Texture2D" uid="uid://dsvgnangalhai" path="res://Scenes/Sprites/Furniture for layers/Layer 1/sofa2.png" id="10_vm72l"]
@@ -39,6 +41,10 @@
 [ext_resource type="Texture2D" uid="uid://drboc11titu5p" path="res://Scenes/Sprites/Furniture for layers/Layer2/construction-stuff.png" id="31_fnkle"]
 [ext_resource type="Texture2D" uid="uid://b6vvrk5xx4brp" path="res://Scenes/Sprites/Furniture for layers/Layer2/cover.png" id="32_wr3wg"]
 [ext_resource type="Texture2D" uid="uid://65kpkcr06fij" path="res://Scenes/Sprites/Furniture for layers/Layer2/graffiti-big.png" id="33_6xvgv"]
+[ext_resource type="Script" uid="uid://bjvqs2435aje4" path="res://Scenes/enemy_system.gd" id="39_v2cs8"]
+[ext_resource type="PackedScene" uid="uid://uyy7fprbbp5" path="res://Scenes/in_game_ui.tscn" id="40_f3c8l"]
+[ext_resource type="Script" uid="uid://t5becw38mf5k" path="res://Scenes/spawn_manager.gd" id="41_32sfa"]
+[ext_resource type="PackedScene" uid="uid://cn4qxld8prynl" path="res://Scenes/Settings.tscn" id="41_bu0y5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v158k"]
 texture = ExtResource("1_1l0tm")
@@ -1172,6 +1178,12 @@ size = Vector2(371, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh24"]
 size = Vector2(15, 478)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfx3s"]
+size = Vector2(81, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5qon"]
+size = Vector2(352, 29)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewbju"]
 texture = ExtResource("2_o5yvi")
@@ -6253,6 +6265,20 @@ shape = SubResource("RectangleShape2D_vs120")
 position = Vector2(951.5, 431)
 shape = SubResource("RectangleShape2D_sjh24")
 
+[node name="Gate" type="StaticBody2D" parent="GameWorld/Layer1"]
+script = ExtResource("7_bu0y5")
+
+[node name="trigger" type="CollisionShape2D" parent="GameWorld/Layer1/Gate"]
+position = Vector2(344.5, 159)
+shape = SubResource("RectangleShape2D_sfx3s")
+
+[node name="transitiontrigger" type="Area2D" parent="GameWorld/Layer1"]
+script = ExtResource("8_vs120")
+
+[node name="transition" type="CollisionShape2D" parent="GameWorld/Layer1/transitiontrigger"]
+position = Vector2(352, 157.5)
+shape = SubResource("RectangleShape2D_p5qon")
+
 [node name="Decorations" type="TileMapLayer" parent="GameWorld"]
 z_index = 1
 tile_map_data = PackedByteArray("AAAYABEARgAAAAAAAAAUAAcAPAAAAAAAAAAWAAcAPAAAAAAAAAACAAgAPgAAAAAAAAAIABEAPwAAAAAAAAACABEAQwAAAAAAAAAGAAcAQwAAAAAAAAAaAAcARQAAAAAAAAAdAAcARQAAAAAAAAAaAAkARQAAAAAAAAAdAAkARQAAAAAAAAAVAA0ARwAAAAAAAAAXAA0ARwAAAAAAAAAeAA0ASAAAAAAAAAAUABsARQAAAAAAAAAXABsARQAAAAAAAAAaABsARQAAAAAAAAAUACEAPAAAAAAAAAAXACEAPAAAAAAAAAAaACEASQAAAAAAAAAGABEASQAAAAAAAAATAA0ASQAAAAAAAAAYAA8ASQAAAAAAAAAYABMASQAAAAAAAAACAAoASQAAAAAAAAANABUASQAAAAAAAAAOABUASQAAAAAAAAAOABYASQAAAAAAAAANABYASQAAAAAAAAANAB0ASQAAAAAAAAAOAB0ASQAAAAAAAAANAB4ASQAAAAAAAAAOAB4ASQAAAAAAAAAVAB4ASgAAAAAAAAAZAB4ASgAAAAAAAAAVABQASgAAAAAAAAAcABQASgAAAAAAAAAJAAcASwAAAAAAAAANAAcASwAAAAAAAAAZAA0ASwAAAAAAAAAWAB4ASwAAAAAAAAAYAB4ASwAAAAAAAAAMACIASwAAAAAAAAAPACIASwAAAAAAAAANABkASwAAAAAAAAAOABkASwAAAAAAAAACAAwATQAAAAAAAAAFABcATQAAAAAAAAAFABIATQAAAAAAAAAbAA8ATQAAAAAAAAAWAA8ATQAAAAAAAAANAA4ATQAAAAAAAAAOAA4ATQAAAAAAAAAFAB8ATwAAAAAAAAADABsASgAAAAAAAAAGABsASgAAAAAAAAA=")
@@ -6783,6 +6809,7 @@ script = ExtResource("4_1phco")
 script = ExtResource("7_ewbju")
 
 [node name="EnemySystem" type="Node" parent="Managers"]
+script = ExtResource("39_v2cs8")
 
 [node name="Enemy" parent="Managers/EnemySystem" instance=ExtResource("3_wowpa")]
 position = Vector2(229, 137)
@@ -6790,6 +6817,7 @@ position = Vector2(229, 137)
 [node name="SpawnSystem" type="Node" parent="Managers"]
 
 [node name="SpawnManager" type="Node" parent="Managers/SpawnSystem"]
+script = ExtResource("41_32sfa")
 
 [node name="Player" type="Node" parent="."]
 
@@ -6814,14 +6842,8 @@ frame_progress = 0.18970735
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="UIWeaponDisplay" type="TextureRect" parent="UI"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="inGameUI" parent="UI" instance=ExtResource("40_f3c8l")]
+visible = false
 
-[node name="UIDiceEffect" type="Label" parent="UI"]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="UIScoreDisplay" type="Label" parent="UI"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Settings" parent="UI" instance=ExtResource("41_bu0y5")]
+visible = false
