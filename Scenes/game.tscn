@@ -6815,7 +6815,7 @@ script = ExtResource("7_ewbju")
 script = ExtResource("39_v2cs8")
 
 [node name="Enemy" parent="Managers/EnemySystem" instance=ExtResource("3_wowpa")]
-position = Vector2(229, 137)
+position = Vector2(324, 291)
 
 [node name="SpawnSystem" type="Node" parent="Managers"]
 
