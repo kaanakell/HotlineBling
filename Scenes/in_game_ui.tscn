@@ -7,8 +7,8 @@
 [ext_resource type="Script" uid="uid://clrmltohw240q" path="res://Scripts/start_button.gd" id="4_orthm"]
 [ext_resource type="Script" uid="uid://b4goatiwdrnvt" path="res://Scripts/quit_button.gd" id="7_dfbn1"]
 [ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="7_s8663"]
-[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scenes/volup.gd" id="8_cpmi5"]
-[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scenes/voldown.gd" id="9_6ra50"]
+[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scripts/volup.gd" id="8_cpmi5"]
+[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scripts/voldown.gd" id="9_6ra50"]
 
 [sub_resource type="Theme" id="Theme_cwbuu"]
 

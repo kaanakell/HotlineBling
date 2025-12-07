@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://caxfnk87uakiu" path="res://UI pack/Settings.png" id="1_w1nw0"]
 [ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="2_flfri"]
 [ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="2_yrknh"]
-[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scenes/volup.gd" id="3_646k0"]
+[ext_resource type="Script" uid="uid://5e2odbf1yosx" path="res://Scripts/volup.gd" id="3_646k0"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="3_mjqtt"]
-[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scenes/voldown.gd" id="4_efosg"]
-[ext_resource type="Script" uid="uid://6m2jfs1ublmx" path="res://Scenes/resume.gd" id="4_ppjuv"]
-[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scenes/restart.gd" id="5_ipgag"]
+[ext_resource type="Script" uid="uid://cy47b7iav6all" path="res://Scripts/voldown.gd" id="4_efosg"]
+[ext_resource type="Script" uid="uid://6m2jfs1ublmx" path="res://Scripts/resume.gd" id="4_ppjuv"]
+[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scripts/restart.gd" id="5_ipgag"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrknh"]
 texture = ExtResource("2_yrknh")
@@ -125,6 +125,7 @@ layout_mode = 2
 theme_override_constants/separation = 40
 
 [node name="resume" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+process_mode = 2
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -142,6 +143,7 @@ layout_mode = 2
 theme_override_constants/separation = 40
 
 [node name="restart" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3"]
+process_mode = 3
 visibility_layer = 2
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 2

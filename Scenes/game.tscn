@@ -1,7 +1,7 @@
 [gd_scene load_steps=183 format=4 uid="uid://vib37a3t14eg"]
 
 [ext_resource type="Texture2D" uid="uid://dgvv5sm6ivnpt" path="res://UI pack/housetileset.png" id="1_1l0tm"]
-[ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scenes/pausegame.gd" id="1_i6g32"]
+[ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scripts/pausegame.gd" id="1_i6g32"]
 [ext_resource type="Texture2D" uid="uid://cqxvx4t2klloq" path="res://Scenes/Sprites/Furniture for layers/Layer 1/outdoor-doors.png" id="2_mg4q0"]
 [ext_resource type="Texture2D" uid="uid://c1g6nnqfbo4q3" path="res://Scenes/Sprites/Furniture for layers/Layer 1/desk.png" id="2_o5yvi"]
 [ext_resource type="Texture2D" uid="uid://d0yfsp10b7qoo" path="res://Scenes/Sprites/Furniture for layers/Layer2/adv-board.png" id="2_ym3tv"]
@@ -13,11 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://0ih1l4blcx0h" path="res://Scenes/Sprites/Furniture for layers/Layer 1/bed3.png" id="5_1phco"]
 [ext_resource type="Texture2D" uid="uid://flewc7m42nkx" path="res://Scenes/Sprites/Furniture for layers/Layer2/bench.png" id="5_f3c8l"]
 [ext_resource type="Texture2D" uid="uid://eihelntc7idi" path="res://Scenes/Sprites/Furniture for layers/Layer 1/cabinet.png" id="6_7nbq1"]
-[ext_resource type="Script" uid="uid://bve8qaqro6d5e" path="res://Scenes/gate.gd" id="7_bu0y5"]
+[ext_resource type="Script" uid="uid://bve8qaqro6d5e" path="res://Scripts/gate.gd" id="7_bu0y5"]
 [ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
 [ext_resource type="Texture2D" uid="uid://bo0wwal3683t3" path="res://Scenes/Sprites/Furniture for layers/Layer 1/shelf.png" id="7_exi56"]
 [ext_resource type="Texture2D" uid="uid://b4j1yrxl6636j" path="res://Scenes/Sprites/Furniture for layers/Layer 1/big sofa.png" id="8_7t8sx"]
-[ext_resource type="Script" uid="uid://b8qdjpek2iwf7" path="res://Scenes/transitiontrigger.gd" id="8_vs120"]
+[ext_resource type="Script" uid="uid://b8qdjpek2iwf7" path="res://Scripts/transitiontrigger.gd" id="8_vs120"]
 [ext_resource type="Texture2D" uid="uid://bxvm88nv0baxh" path="res://Scenes/Sprites/Furniture for layers/Layer 1/sofa1.png" id="9_mg4q0"]
 [ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/PlayerController.cs" id="10_7nbq1"]
 [ext_resource type="Texture2D" uid="uid://dsvgnangalhai" path="res://Scenes/Sprites/Furniture for layers/Layer 1/sofa2.png" id="10_vm72l"]
@@ -41,9 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://drboc11titu5p" path="res://Scenes/Sprites/Furniture for layers/Layer2/construction-stuff.png" id="31_fnkle"]
 [ext_resource type="Texture2D" uid="uid://b6vvrk5xx4brp" path="res://Scenes/Sprites/Furniture for layers/Layer2/cover.png" id="32_wr3wg"]
 [ext_resource type="Texture2D" uid="uid://65kpkcr06fij" path="res://Scenes/Sprites/Furniture for layers/Layer2/graffiti-big.png" id="33_6xvgv"]
-[ext_resource type="Script" uid="uid://bjvqs2435aje4" path="res://Scenes/enemy_system.gd" id="39_v2cs8"]
+[ext_resource type="Script" uid="uid://bjvqs2435aje4" path="res://Scripts/enemy_system.gd" id="39_v2cs8"]
 [ext_resource type="PackedScene" uid="uid://uyy7fprbbp5" path="res://Scenes/in_game_ui.tscn" id="40_f3c8l"]
-[ext_resource type="Script" uid="uid://t5becw38mf5k" path="res://Scenes/spawn_manager.gd" id="41_32sfa"]
+[ext_resource type="Script" uid="uid://t5becw38mf5k" path="res://Scripts/spawn_manager.gd" id="41_32sfa"]
 [ext_resource type="PackedScene" uid="uid://cn4qxld8prynl" path="res://Scenes/Settings.tscn" id="41_bu0y5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v158k"]
@@ -6079,7 +6079,9 @@ size = Vector2(16, 127)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kfie"]
 size = Vector2(110, 17.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mwb40"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vs120"]
+radius = 7.238098
+height = 26.666656
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
 atlas = ExtResource("11_exi56")
@@ -6279,250 +6281,250 @@ script = ExtResource("8_vs120")
 position = Vector2(352, 157.5)
 shape = SubResource("RectangleShape2D_p5qon")
 
-[node name="Decorations" type="TileMapLayer" parent="GameWorld"]
+[node name="Decorations" type="TileMapLayer" parent="GameWorld/Layer1"]
 z_index = 1
 tile_map_data = PackedByteArray("AAAYABEARgAAAAAAAAAUAAcAPAAAAAAAAAAWAAcAPAAAAAAAAAACAAgAPgAAAAAAAAAIABEAPwAAAAAAAAACABEAQwAAAAAAAAAGAAcAQwAAAAAAAAAaAAcARQAAAAAAAAAdAAcARQAAAAAAAAAaAAkARQAAAAAAAAAdAAkARQAAAAAAAAAVAA0ARwAAAAAAAAAXAA0ARwAAAAAAAAAeAA0ASAAAAAAAAAAUABsARQAAAAAAAAAXABsARQAAAAAAAAAaABsARQAAAAAAAAAUACEAPAAAAAAAAAAXACEAPAAAAAAAAAAaACEASQAAAAAAAAAGABEASQAAAAAAAAATAA0ASQAAAAAAAAAYAA8ASQAAAAAAAAAYABMASQAAAAAAAAACAAoASQAAAAAAAAANABUASQAAAAAAAAAOABUASQAAAAAAAAAOABYASQAAAAAAAAANABYASQAAAAAAAAANAB0ASQAAAAAAAAAOAB0ASQAAAAAAAAANAB4ASQAAAAAAAAAOAB4ASQAAAAAAAAAVAB4ASgAAAAAAAAAZAB4ASgAAAAAAAAAVABQASgAAAAAAAAAcABQASgAAAAAAAAAJAAcASwAAAAAAAAANAAcASwAAAAAAAAAZAA0ASwAAAAAAAAAWAB4ASwAAAAAAAAAYAB4ASwAAAAAAAAAMACIASwAAAAAAAAAPACIASwAAAAAAAAANABkASwAAAAAAAAAOABkASwAAAAAAAAACAAwATQAAAAAAAAAFABcATQAAAAAAAAAFABIATQAAAAAAAAAbAA8ATQAAAAAAAAAWAA8ATQAAAAAAAAANAA4ATQAAAAAAAAAOAA4ATQAAAAAAAAAFAB8ATwAAAAAAAAADABsASgAAAAAAAAAGABsASgAAAAAAAAA=")
 tile_set = SubResource("TileSet_1l0tm")
 
-[node name="items" type="StaticBody2D" parent="GameWorld/Decorations"]
+[node name="items" type="StaticBody2D" parent="GameWorld/Layer1/Decorations"]
 
-[node name="1" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="1" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(75.5, 258.5)
 shape = SubResource("RectangleShape2D_xe308")
 
-[node name="2" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="2" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(75, 316)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="3" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="3" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(256, 522.75)
 shape = SubResource("RectangleShape2D_i26dy")
 
-[node name="4" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="4" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(195.5, 225)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="5" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="5" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(885, 224)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="6" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="6" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(885, 284)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="7" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="7" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(795, 285)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="8" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="8" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(795, 224)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="9" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="9" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(616, 224)
 shape = SubResource("RectangleShape2D_xe308")
 
-[node name="10" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="10" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(195, 526)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="11" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="11" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(673, 224)
 shape = SubResource("RectangleShape2D_xe308")
 
-[node name="12" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="12" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(405, 646)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="13" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="13" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(405, 677)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="14" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="14" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(434, 677)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="15" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="15" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(434, 646)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="16" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="16" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(286.5, 233)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="17" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="17" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(407, 233)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="18" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="18" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(767, 414)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="19" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="19" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(407, 774)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="20" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="20" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(437, 773)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="21" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="21" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(676, 924)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="22" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="22" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(736, 924)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="23" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="23" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(466, 1043)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="24" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="24" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(466, 1043)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="25" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="25" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(377, 1044)
 shape = SubResource("RectangleShape2D_6uxt2")
 
-[node name="26" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="26" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(615, 1006)
 shape = SubResource("RectangleShape2D_xe308")
 
-[node name="27" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="27" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(705, 1005)
 shape = SubResource("RectangleShape2D_xe308")
 
-[node name="28" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="28" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(795, 1004)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="29" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="29" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(406, 886)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="30" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="30" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(406, 917)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="31" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="31" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(435, 917)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="32" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="32" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(435, 886)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="33" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="33" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(76, 523)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="34" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="34" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(735, 586)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="35" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="35" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(735, 464)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="36" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="36" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(585, 405)
 shape = SubResource("RectangleShape2D_d3cha")
 
-[node name="37" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="37" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(645, 403.5)
 shape = SubResource("RectangleShape2D_ym3tv")
 
-[node name="38" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="38" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(705, 404)
 shape = SubResource("RectangleShape2D_ym3tv")
 
-[node name="39" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="39" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(915, 403)
 shape = SubResource("RectangleShape2D_ym3tv")
 
-[node name="40" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="40" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(718, 539.25)
 shape = SubResource("RectangleShape2D_ym3tv")
 
-[node name="41" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="41" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(704, 826)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="42" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="42" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(615, 825)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="43" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="43" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(795, 825)
 shape = SubResource("RectangleShape2D_lmoi6")
 
-[node name="44" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="44" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(165.25, 945.875)
 shape = SubResource("RectangleShape2D_bwj6o")
 
-[node name="45" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="45" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(166, 570)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="46" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="46" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(165, 719)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="47" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="47" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(405.375, 448)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="48" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="48" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(436, 448)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="49" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="49" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(675, 479)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="50" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="50" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(825, 479)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="51" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="51" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(106, 832)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="52" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="52" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(196, 833)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="53" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="53" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(646, 923)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="54" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="54" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(766, 924)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="55" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="55" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(646, 623.5)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="56" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="56" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(856, 623)
 shape = SubResource("RectangleShape2D_bu0y5")
 
-[node name="57" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="57" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(76, 389)
 shape = SubResource("RectangleShape2D_f3c8l")
 
-[node name="58" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="58" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(768.25, 531)
 shape = SubResource("RectangleShape2D_6a4tp")
 
-[node name="59" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="59" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(702, 511)
 shape = SubResource("RectangleShape2D_631el")
 
-[node name="60" type="CollisionShape2D" parent="GameWorld/Decorations/items"]
+[node name="60" type="CollisionShape2D" parent="GameWorld/Layer1/Decorations/items"]
 position = Vector2(742, 508)
 shape = SubResource("RectangleShape2D_631el")
 
@@ -6793,8 +6795,9 @@ shape = SubResource("RectangleShape2D_6i05k")
 position = Vector2(888, 439.25)
 shape = SubResource("RectangleShape2D_1kfie")
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("pause_menu")]
 script = ExtResource("1_i6g32")
+pause_menu = NodePath("../UI/Settings")
 
 [node name="Managers" type="Node" parent="."]
 
@@ -6823,13 +6826,15 @@ script = ExtResource("41_32sfa")
 
 [node name="PlayerController" type="CharacterBody2D" parent="Player"]
 position = Vector2(515, 270)
+scale = Vector2(0.75, 0.75)
 script = ExtResource("10_7nbq1")
 WeaponManagerPath = NodePath("../../Managers/WeaponSystem/WeaponManager")
 ScoreManagerPath = NodePath("../../Managers/ScoreSystem/ScoreManager")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerController"]
-scale = Vector2(2, 2)
-shape = SubResource("CircleShape2D_mwb40")
+position = Vector2(2, 0.666687)
+scale = Vector2(1.75, 1.75)
+shape = SubResource("CapsuleShape2D_vs120")
 debug_color = Color(0.18634447, 0.584607, 0.7304012, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/PlayerController"]
