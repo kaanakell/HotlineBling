@@ -1,4 +1,4 @@
-[gd_scene load_steps=183 format=4 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=181 format=4 uid="uid://vib37a3t14eg"]
 
 [ext_resource type="Texture2D" uid="uid://dgvv5sm6ivnpt" path="res://UI pack/housetileset.png" id="1_1l0tm"]
 [ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scripts/pausegame.gd" id="1_i6g32"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://0ih1l4blcx0h" path="res://Scenes/Sprites/Furniture for layers/Layer 1/bed3.png" id="5_1phco"]
 [ext_resource type="Texture2D" uid="uid://flewc7m42nkx" path="res://Scenes/Sprites/Furniture for layers/Layer2/bench.png" id="5_f3c8l"]
 [ext_resource type="Texture2D" uid="uid://eihelntc7idi" path="res://Scenes/Sprites/Furniture for layers/Layer 1/cabinet.png" id="6_7nbq1"]
-[ext_resource type="Script" uid="uid://bve8qaqro6d5e" path="res://Scripts/gate.gd" id="7_bu0y5"]
 [ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
 [ext_resource type="Texture2D" uid="uid://bo0wwal3683t3" path="res://Scenes/Sprites/Furniture for layers/Layer 1/shelf.png" id="7_exi56"]
 [ext_resource type="Texture2D" uid="uid://b4j1yrxl6636j" path="res://Scenes/Sprites/Furniture for layers/Layer 1/big sofa.png" id="8_7t8sx"]
@@ -1178,9 +1177,6 @@ size = Vector2(371, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh24"]
 size = Vector2(15, 478)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfx3s"]
-size = Vector2(81, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5qon"]
 size = Vector2(352, 29)
@@ -6267,18 +6263,14 @@ shape = SubResource("RectangleShape2D_vs120")
 position = Vector2(951.5, 431)
 shape = SubResource("RectangleShape2D_sjh24")
 
-[node name="Gate" type="StaticBody2D" parent="GameWorld/Layer1"]
-script = ExtResource("7_bu0y5")
-
-[node name="trigger" type="CollisionShape2D" parent="GameWorld/Layer1/Gate"]
-position = Vector2(344.5, 159)
-shape = SubResource("RectangleShape2D_sfx3s")
-
-[node name="transitiontrigger" type="Area2D" parent="GameWorld/Layer1"]
+[node name="transitiontrigger" type="Area2D" parent="GameWorld/Layer1" node_paths=PackedStringArray("EnemySystem", "Layer2", "Gate")]
 script = ExtResource("8_vs120")
+EnemySystem = NodePath("../../../Managers/EnemySystem")
+Layer2 = NodePath("../../Layer2")
+Gate = NodePath("")
 
 [node name="transition" type="CollisionShape2D" parent="GameWorld/Layer1/transitiontrigger"]
-position = Vector2(352, 157.5)
+position = Vector2(352, 129)
 shape = SubResource("RectangleShape2D_p5qon")
 
 [node name="Decorations" type="TileMapLayer" parent="GameWorld/Layer1"]
