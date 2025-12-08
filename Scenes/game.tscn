@@ -1,4 +1,4 @@
-[gd_scene load_steps=183 format=4 uid="uid://vib37a3t14eg"]
+[gd_scene load_steps=179 format=4 uid="uid://vib37a3t14eg"]
 
 [ext_resource type="Texture2D" uid="uid://dgvv5sm6ivnpt" path="res://UI pack/housetileset.png" id="1_1l0tm"]
 [ext_resource type="Script" uid="uid://b7yk0l4q8ix68" path="res://Scripts/pausegame.gd" id="1_i6g32"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://0ih1l4blcx0h" path="res://Scenes/Sprites/Furniture for layers/Layer 1/bed3.png" id="5_1phco"]
 [ext_resource type="Texture2D" uid="uid://flewc7m42nkx" path="res://Scenes/Sprites/Furniture for layers/Layer2/bench.png" id="5_f3c8l"]
 [ext_resource type="Texture2D" uid="uid://eihelntc7idi" path="res://Scenes/Sprites/Furniture for layers/Layer 1/cabinet.png" id="6_7nbq1"]
-[ext_resource type="Script" uid="uid://bve8qaqro6d5e" path="res://Scripts/gate.gd" id="7_bu0y5"]
 [ext_resource type="Script" uid="uid://cm25vllmx03i0" path="res://Scripts/ScoreManager.cs" id="7_ewbju"]
 [ext_resource type="Texture2D" uid="uid://bo0wwal3683t3" path="res://Scenes/Sprites/Furniture for layers/Layer 1/shelf.png" id="7_exi56"]
 [ext_resource type="Texture2D" uid="uid://b4j1yrxl6636j" path="res://Scenes/Sprites/Furniture for layers/Layer 1/big sofa.png" id="8_7t8sx"]
@@ -41,9 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://drboc11titu5p" path="res://Scenes/Sprites/Furniture for layers/Layer2/construction-stuff.png" id="31_fnkle"]
 [ext_resource type="Texture2D" uid="uid://b6vvrk5xx4brp" path="res://Scenes/Sprites/Furniture for layers/Layer2/cover.png" id="32_wr3wg"]
 [ext_resource type="Texture2D" uid="uid://65kpkcr06fij" path="res://Scenes/Sprites/Furniture for layers/Layer2/graffiti-big.png" id="33_6xvgv"]
-[ext_resource type="Script" uid="uid://bjvqs2435aje4" path="res://Scripts/enemy_system.gd" id="39_v2cs8"]
 [ext_resource type="PackedScene" uid="uid://uyy7fprbbp5" path="res://Scenes/in_game_ui.tscn" id="40_f3c8l"]
-[ext_resource type="Script" uid="uid://t5becw38mf5k" path="res://Scripts/spawn_manager.gd" id="41_32sfa"]
 [ext_resource type="PackedScene" uid="uid://cn4qxld8prynl" path="res://Scenes/Settings.tscn" id="41_bu0y5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v158k"]
@@ -1179,11 +1176,8 @@ size = Vector2(371, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh24"]
 size = Vector2(15, 478)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfx3s"]
-size = Vector2(81, 32)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5qon"]
-size = Vector2(352, 29)
+size = Vector2(352, 31.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewbju"]
 texture = ExtResource("2_o5yvi")
@@ -5995,7 +5989,7 @@ size = Vector2(57, 16)
 size = Vector2(15, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4j8i"]
-size = Vector2(114, 55)
+size = Vector2(114, 47)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fykvq"]
 radius = 13.0
@@ -6267,18 +6261,14 @@ shape = SubResource("RectangleShape2D_vs120")
 position = Vector2(951.5, 431)
 shape = SubResource("RectangleShape2D_sjh24")
 
-[node name="Gate" type="StaticBody2D" parent="GameWorld/Layer1"]
-script = ExtResource("7_bu0y5")
-
-[node name="trigger" type="CollisionShape2D" parent="GameWorld/Layer1/Gate"]
-position = Vector2(344.5, 159)
-shape = SubResource("RectangleShape2D_sfx3s")
-
-[node name="transitiontrigger" type="Area2D" parent="GameWorld/Layer1"]
+[node name="transitiontrigger" type="Area2D" parent="GameWorld/Layer1" node_paths=PackedStringArray("gamemanager", "entry", "player")]
 script = ExtResource("8_vs120")
+gamemanager = NodePath(".")
+entry = NodePath("../../Layer2/entry")
+player = NodePath("../../../Player/PlayerController")
 
 [node name="transition" type="CollisionShape2D" parent="GameWorld/Layer1/transitiontrigger"]
-position = Vector2(352, 157.5)
+position = Vector2(352, 158.75)
 shape = SubResource("RectangleShape2D_p5qon")
 
 [node name="Decorations" type="TileMapLayer" parent="GameWorld/Layer1"]
@@ -6625,7 +6615,7 @@ position = Vector2(672, 528)
 shape = SubResource("RectangleShape2D_umggo")
 
 [node name="22" type="CollisionShape2D" parent="GameWorld/Layer2/furniture/items"]
-position = Vector2(720, 991.5)
+position = Vector2(720, 995.5)
 shape = SubResource("RectangleShape2D_w4j8i")
 
 [node name="23" type="CollisionShape2D" parent="GameWorld/Layer2/furniture/items"]
@@ -6795,6 +6785,10 @@ shape = SubResource("RectangleShape2D_6i05k")
 position = Vector2(888, 439.25)
 shape = SubResource("RectangleShape2D_1kfie")
 
+[node name="entry" type="Marker2D" parent="GameWorld/Layer2"]
+position = Vector2(424, 1053)
+gizmo_extents = 35.0
+
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("pause_menu")]
 script = ExtResource("1_i6g32")
 pause_menu = NodePath("../UI/Settings")
@@ -6812,19 +6806,17 @@ script = ExtResource("4_1phco")
 script = ExtResource("7_ewbju")
 
 [node name="EnemySystem" type="Node" parent="Managers"]
-script = ExtResource("39_v2cs8")
 
-[node name="Enemy" parent="Managers/EnemySystem" instance=ExtResource("3_wowpa")]
+[node name="Enemy" parent="Managers/EnemySystem" groups=["enemies"] instance=ExtResource("3_wowpa")]
 position = Vector2(324, 291)
 
 [node name="SpawnSystem" type="Node" parent="Managers"]
 
 [node name="SpawnManager" type="Node" parent="Managers/SpawnSystem"]
-script = ExtResource("41_32sfa")
 
 [node name="Player" type="Node" parent="."]
 
-[node name="PlayerController" type="CharacterBody2D" parent="Player"]
+[node name="PlayerController" type="CharacterBody2D" parent="Player" groups=["player"]]
 position = Vector2(515, 270)
 scale = Vector2(0.75, 0.75)
 script = ExtResource("10_7nbq1")
