@@ -1,16 +1,8 @@
 extends Button
-
+#Automatically call the function once when all the nodes and their children are loaded. 
 func _ready():
-	self.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	self.pressed.connect(_on_resume_clicked)
-
-func _on_resume_clicked():
-	get_tree().paused = false
-
-	var menu_panel = get_parent()
-	
-	while menu_panel and not menu_panel.name == "Settings":
-		menu_panel = menu_panel.get_parent()
-		
-	if menu_panel:
-		menu_panel.visible = false
+	self.pressed.connect(_on_button_pressed)
+# When the button is given a signal "pressed", call the function "_on_button_pressed".
+# Define the function "_on_button_pressed", call the main tree, and execute the quit order. 
+func _on_button_pressed():
+	get_tree().quit()
