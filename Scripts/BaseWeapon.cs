@@ -71,9 +71,15 @@ public partial class BaseWeapon : Resource, IWeapon
 		{
 			result.Hit = true;
 			result.HitEntity = endPoint.HitEntity;
+
 			if (result.HitEntity is Enemy enemy)
 			{
 				enemy.ApplyDamage(Damage);
+			}
+			else if (result.HitEntity is Area2D hurtbox && hurtbox.GetParent() is Enemy parentEnemy)
+			{
+				parentEnemy.ApplyDamage(Damage);
+				result.HitEntity = parentEnemy;
 			}
 		}
 
@@ -87,8 +93,15 @@ public partial class BaseWeapon : Resource, IWeapon
 	protected RayResult PerformRaycast(Node2D shooter, Vector2 dir)
 	{
 		var space = shooter.GetWorld2D().DirectSpaceState;
-		var query = PhysicsRayQueryParameters2D.Create(from: shooter.GlobalPosition, to: shooter.GlobalPosition + dir * Range);
-		query.CollisionMask = 1;
+		var query = PhysicsRayQueryParameters2D.Create(
+			from: shooter.GlobalPosition,
+			to: shooter.GlobalPosition + dir * Range
+		);
+
+		query.CollisionMask = 1 | 4;
+
+		query.CollideWithAreas = true;
+
 		if (shooter is CollisionObject2D body)
 		{
 			query.Exclude = new Godot.Collections.Array<Rid> { body.GetRid() };

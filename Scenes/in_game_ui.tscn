@@ -34,29 +34,33 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="MainMenu" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(1920, 1080)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 48.000004
-anchor_bottom = 27.000002
-offset_right = -0.00012207031
-offset_bottom = -0.00012207031
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="MainMenu"]
-custom_minimum_size = Vector2(1920, 1080)
+[node name="MainMenu" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainMenu"]
 layout_mode = 2
 texture = ExtResource("1_kenku")
 expand_mode = 1
-stretch_mode = 6
 
-[node name="TitleContainer" type="MarginContainer" parent="MainMenu"]
+[node name="TitleContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="GameTitle" type="Label" parent="MainMenu/TitleContainer"]
+[node name="GameTitle" type="Label" parent="CanvasLayer/MainMenu/TitleContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -71,16 +75,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 0
-offset_left = 810.0
-offset_top = 625.0
-offset_right = 1110.0
-offset_bottom = 985.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 87.0
+offset_right = 150.00024
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Start" type="TextureRect" parent="VBoxContainer"]
+[node name="Start" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
 texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(300, 60)
@@ -88,7 +97,7 @@ layout_mode = 2
 theme = SubResource("Theme_cwbuu")
 texture = ExtResource("3_cwbuu")
 
-[node name="StartButton" type="Button" parent="VBoxContainer/Start"]
+[node name="StartButton" type="Button" parent="CanvasLayer/VBoxContainer/Start"]
 show_behind_parent = true
 layout_mode = 0
 offset_top = 6.0
@@ -96,7 +105,7 @@ offset_right = 300.0
 offset_bottom = 70.0
 script = ExtResource("4_orthm")
 
-[node name="Label" type="Label" parent="VBoxContainer/Start"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Start"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 0
 offset_top = 6.0
@@ -109,21 +118,21 @@ text = "START"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quit" type="TextureRect" parent="VBoxContainer"]
+[node name="Quit" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
 texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 texture = ExtResource("3_cwbuu")
 
-[node name="QuitButton" type="Button" parent="VBoxContainer/Quit"]
+[node name="QuitButton" type="Button" parent="CanvasLayer/VBoxContainer/Quit"]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 304.0
 offset_bottom = 66.0
 script = ExtResource("7_dfbn1")
 
-[node name="Label" type="Label" parent="VBoxContainer/Quit"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Quit"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 0
 offset_top = 6.0
@@ -137,7 +146,21 @@ text = "QUIT
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Volup" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -228.0
+offset_right = 82.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 90
+
+[node name="Volup" type="Button" parent="CanvasLayer/HBoxContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -146,19 +169,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_canx1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s8663")
 script = ExtResource("8_cpmi5")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 23.35
-anchor_top = 20.0
-anchor_right = 25.2
-anchor_bottom = 21.7
-offset_left = 96.0
-offset_top = -6.0
-offset_right = 104.0
-offset_bottom = 7.0
-
-[node name="Voldown" type="Button" parent="HBoxContainer"]
+[node name="Voldown" type="Button" parent="CanvasLayer/HBoxContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 0

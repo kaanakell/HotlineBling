@@ -8,6 +8,10 @@ public partial class PlayerController : CharacterBody2D
 	[Export] public NodePath ScoreManagerPath;
 	[Export] public Node2D WeaponPivot;
 
+	[ExportCategory("UI Scenes")]
+	[Export] public PackedScene GameOverScene;
+	[Export] public PackedScene WinScene;
+
 	private WeaponManager _weaponManager;
 	private ScoreManager _scoreManager;
 	private BaseWeapon _weapon;
@@ -130,10 +134,58 @@ public partial class PlayerController : CharacterBody2D
 		line.Width = 2.0f;
 		line.DefaultColor = Colors.Yellow;
 		line.TopLevel = true;
+
+		line.ZIndex = 10;
+
 		GetTree().Root.AddChild(line);
 
 		var tween = CreateTween();
 		tween.TweenProperty(line, "modulate:a", 0.0f, 0.1f);
 		tween.TweenCallback(Callable.From(line.QueueFree));
+	}
+
+	public void Die()
+	{
+		if (GetTree().Paused) return;
+
+		GD.Print("PLAYER DIED!");
+		GetTree().Paused = true;
+
+		if (GameOverScene != null)
+		{
+			var screen = GameOverScene.Instantiate();
+			GetTree().Root.AddChild(screen);
+		}
+		else
+		{
+			GD.PrintErr("GameOverScene is not assigned in PlayerController!");
+		}
+	}
+
+	public void Win()
+	{
+		if (GetTree().Paused) return;
+
+		GetTree().Paused = true;
+
+		int finalScore = 0;
+		string grade = "F";
+
+		if (_scoreManager != null)
+		{
+			finalScore = _scoreManager.FinalScore(_weapon);
+			grade = DefaultScoringRule.GetGrade(finalScore);
+		}
+
+		if (WinScene != null)
+		{
+			var screenInstance = WinScene.Instantiate();
+			GetTree().Root.AddChild(screenInstance);
+
+			if (screenInstance is WinScreen winScript)
+			{
+				winScript.Setup(finalScore, grade);
+			}
+		}
 	}
 }

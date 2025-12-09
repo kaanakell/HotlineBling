@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cha6bmtlawqw0"]
+[gd_scene load_steps=14 format=3 uid="uid://cha6bmtlawqw0"]
 
 [ext_resource type="Script" uid="uid://bmwrhkpnxmf20" path="res://Scripts/Enemy.cs" id="1_wovta"]
 [ext_resource type="Texture2D" uid="uid://dkdwfp27guodl" path="res://Scenes/Sprites/The Female Adventurer - Free/Idle/Idle.png" id="2_xeo28"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wovta"]
-radius = 5.3333335
-height = 22.666668
+[sub_resource type="CircleShape2D" id="CircleShape2D_wovta"]
+radius = 3.3333335
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l0tm"]
 atlas = ExtResource("2_xeo28")
@@ -71,15 +70,34 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Enemy" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wovta"]
+radius = 10.666667
+height = 48.0
+
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("PatrolPoints") groups=["enemies"]]
 scale = Vector2(0.75, 0.75)
+collision_mask = 9
 script = ExtResource("1_wovta")
+PatrolPoints = []
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 20)
 scale = Vector2(2, 2)
-shape = SubResource("CapsuleShape2D_wovta")
+shape = SubResource("CircleShape2D_wovta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_nb51f")
 autoplay = "default"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+debug_path_custom_color = Color(0.9273011, 0, 0.19691226, 1)
+
+[node name="VisionCast" type="RayCast2D" parent="."]
+target_position = Vector2(300, 0)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_wovta")
