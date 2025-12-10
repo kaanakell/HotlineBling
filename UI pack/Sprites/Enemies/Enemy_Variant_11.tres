@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://dbab1vig2baaw"]
+
+[ext_resource type="Texture2D" uid="uid://bls3llkyajyt7" path="res://UI pack/Sprites/Enemies/character-base-sketch-taller.png" id="1_1alc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1alc2"]
+atlas = ExtResource("1_1alc2")
+region = Rect2(128, 128, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1alc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

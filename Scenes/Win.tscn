@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://chkfdb8ag0qpi"]
+[gd_scene load_steps=12 format=3 uid="uid://chkfdb8ag0qpi"]
 
+[ext_resource type="Script" uid="uid://6thnum46bwxx" path="res://Scripts/C# Scripts/WinScreen.cs" id="1_2vnvq"]
 [ext_resource type="Texture2D" uid="uid://doeo8qgx0sbr1" path="res://UI pack/ending.png" id="1_ov476"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="2_2vnvq"]
 [ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="3_6wuka"]
-[ext_resource type="Script" uid="uid://6m2jfs1ublmx" path="res://Scripts/resume.gd" id="4_7mdni"]
-[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scripts/restart.gd" id="5_litrt"]
+[ext_resource type="Script" uid="uid://d3mx7yy37xvbo" path="res://Scripts/GDScripts/main_menu_button.gd" id="5_2vnvq"]
+[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scripts/GDScripts/restart.gd" id="5_litrt"]
 [ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="6_35k6n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuboj"]
@@ -23,101 +24,66 @@ region_rect = Rect2(2164, 3100, 1269, 459)
 texture = ExtResource("3_6wuka")
 region_rect = Rect2(2163, 3087, 1273, 472)
 
-[node name="Settings" type="Control"]
-texture_filter = 1
-layout_mode = 3
+[node name="WinUI" type="CanvasLayer" node_paths=PackedStringArray("GradeLabel", "ScoreLabel", "TitleLabel", "GradeText", "RestartButton")]
+script = ExtResource("1_2vnvq")
+GradeLabel = NodePath("GradeByLetter")
+ScoreLabel = NodePath("Score")
+TitleLabel = NodePath("Total Score")
+GradeText = NodePath("Grade")
+RestartButton = NodePath("ButtonContainer/VBoxContainer/restart")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.5882353)
+z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-texture_filter = 1
-clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-layout_mode = 2
 texture = ExtResource("1_ov476")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="ButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1180, 500)
-layout_mode = 2
+[node name="ButtonContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -421.0
+offset_right = -6.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 10
 
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/ButtonContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.060000002
-anchor_top = 0.051000003
-anchor_right = 0.92600006
-anchor_bottom = 1.2060001
-offset_left = 350.2
-offset_top = 297.5
-offset_right = -371.68005
-offset_bottom = -6.1035156e-05
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 30
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
+alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="quit" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="MainMenu" type="Button" parent="ButtonContainer/VBoxContainer"]
 process_mode = 2
-custom_minimum_size = Vector2(200, 80)
+custom_minimum_size = Vector2(250, 80)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2vnvq")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_uuboj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xwhmm")
-text = "QUIT
-"
-script = ExtResource("4_7mdni")
+text = "MAIN MENU"
+script = ExtResource("5_2vnvq")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="restart" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="restart" type="Button" parent="ButtonContainer/VBoxContainer"]
 process_mode = 3
 visibility_layer = 2
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.67058825, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2vnvq")
 theme_override_font_sizes/font_size = 30
@@ -126,36 +92,65 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_74x7w")
 text = "RESTART"
 script = ExtResource("5_litrt")
 
-[node name="seperation" type="Control" parent="MarginContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(10, 200)
-layout_mode = 2
-
-[node name="Victory" type="Label" parent="."]
-layout_mode = 1
+[node name="Total Score" type="Label" parent="."]
+modulate = Color(0.7295887, 0.6087726, 0.83600914, 1)
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 479.0
-offset_top = 438.0
-offset_right = -492.0
-offset_bottom = -462.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_35k6n")
-theme_override_font_sizes/font_size = 80
-text = "Totoal Scores："
-
-[node name="scores" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.84000003
-anchor_bottom = 0.333
-offset_left = 547.0
-offset_top = 192.0
-offset_right = -240.80005
-offset_bottom = 12.359985
-theme_override_colors/font_color = Color(0.09411765, 1, 1, 1)
+anchor_left = 0.36200002
+anchor_top = 0.277
+anchor_right = 0.36200002
+anchor_bottom = 0.277
+offset_left = -365.04004
+offset_top = -56.160004
+offset_right = 609.95996
+offset_bottom = 94.84
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/font = ExtResource("6_35k6n")
 theme_override_font_sizes/font_size = 150
-text = "VICTORY"
+text = "Total Score:"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Grade" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.455
+anchor_right = 0.342
+anchor_bottom = 0.455
+offset_left = -190.64001
+offset_top = -56.400024
+offset_right = 315.36
+offset_bottom = 94.599976
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/font = ExtResource("6_35k6n")
+theme_override_font_sizes/font_size = 150
+text = "Grade:"
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.78200006
+anchor_top = 0.27800003
+anchor_right = 0.78200006
+anchor_bottom = 0.27800003
+offset_left = -372.4402
+offset_top = -56.240005
+offset_right = 621.5598
+offset_bottom = 94.75998
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/font = ExtResource("6_35k6n")
+theme_override_font_sizes/font_size = 150
+text = "0"
+vertical_alignment = 1
+
+[node name="GradeByLetter" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.453
+anchor_right = 0.512
+anchor_bottom = 0.453
+offset_left = -120.04004
+offset_top = -92.24002
+offset_right = 119.03992
+offset_bottom = 92.23996
+theme_override_fonts/font = ExtResource("6_35k6n")
+theme_override_font_sizes/font_size = 150
+vertical_alignment = 1

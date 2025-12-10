@@ -1,95 +1,43 @@
-[gd_scene load_steps=13 format=3 uid="uid://bs18o7bltrkk6"]
+[gd_scene load_steps=6 format=3 uid="uid://bs18o7bltrkk6"]
 
-[ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/PlayerController.cs" id="1_5ur5x"]
-[ext_resource type="Texture2D" uid="uid://b3fig2efugt2e" path="res://Scenes/Sprites/The Male adventurer - Free/Idle/idle.png" id="2_dl1v4"]
+[ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/C# Scripts/PlayerController.cs" id="1_5ur5x"]
+[ext_resource type="PackedScene" uid="uid://btydbwolkwib3" path="res://Scenes/Lose.tscn" id="2_bnokr"]
+[ext_resource type="PackedScene" uid="uid://chkfdb8ag0qpi" path="res://Scenes/Win.tscn" id="3_1esxm"]
+[ext_resource type="SpriteFrames" uid="uid://bti21aj483p5j" path="res://UI pack/Sprites/Player/Player.tres" id="4_bnokr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vs120"]
 radius = 7.238098
 height = 26.666656
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(0, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_feb5d"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(48, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(96, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(144, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ryrav"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(192, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eow3j"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(240, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j5wjh"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(288, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
-atlas = ExtResource("2_dl1v4")
-region = Rect2(336, 0, 48, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hve3p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e2o6t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_feb5d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fc0e3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7jktm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ryrav")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eow3j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j5wjh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vef74")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[node name="PlayerController" type="CharacterBody2D" groups=["player"]]
+[node name="PlayerController" type="CharacterBody2D" node_paths=PackedStringArray("WeaponPivot") groups=["player"]]
 scale = Vector2(0.75, 0.75)
 collision_mask = 9
 script = ExtResource("1_5ur5x")
 WeaponManagerPath = NodePath("../../Managers/WeaponSystem/WeaponManager")
 ScoreManagerPath = NodePath("../../Managers/ScoreSystem/ScoreManager")
+WeaponPivot = NodePath("WeaponPivot")
+GameOverScene = ExtResource("2_bnokr")
+WinScene = ExtResource("3_1esxm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0.666687)
 scale = Vector2(1.75, 1.75)
 shape = SubResource("CapsuleShape2D_vs120")
 debug_color = Color(0.18634447, 0.584607, 0.7304012, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_hve3p")
+sprite_frames = ExtResource("4_bnokr")
 autoplay = "default"
-frame_progress = 0.18970735
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
 position_smoothing_enabled = true
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+z_index = 1
+
+[node name="WeaponSprite" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(25, 0)
+flip_h = true
+
+[node name="Muzzle" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(40, 0)

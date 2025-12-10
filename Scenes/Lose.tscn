@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://btydbwolkwib3"]
+[gd_scene load_steps=12 format=3 uid="uid://btydbwolkwib3"]
 
 [ext_resource type="Texture2D" uid="uid://doeo8qgx0sbr1" path="res://UI pack/ending.png" id="1_uuboj"]
+[ext_resource type="Script" uid="uid://70sv2c4pbu3m" path="res://Scripts/C# Scripts/GameOverScreen.cs" id="1_xwhmm"]
 [ext_resource type="Texture2D" uid="uid://dplbmo8kjj6o5" path="res://UI pack/Botões de Interface - Pixel Art.png" id="2_5tbt8"]
 [ext_resource type="FontFile" uid="uid://b11fe7b475dn5" path="res://UI pack/tinypixel.otf" id="5_p2dos"]
-[ext_resource type="Script" uid="uid://6m2jfs1ublmx" path="res://Scripts/resume.gd" id="6_ffctu"]
-[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scripts/restart.gd" id="7_k4pwf"]
+[ext_resource type="Script" uid="uid://d3mx7yy37xvbo" path="res://Scripts/GDScripts/main_menu_button.gd" id="5_xwhmm"]
+[ext_resource type="Script" uid="uid://bnb1incw2vbkk" path="res://Scripts/GDScripts/restart.gd" id="7_k4pwf"]
 [ext_resource type="FontFile" uid="uid://b7sla3yeg0hm4" path="res://UI pack/quaver.ttf" id="8_8m1s4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuboj"]
@@ -23,95 +24,63 @@ region_rect = Rect2(2164, 3100, 1269, 459)
 texture = ExtResource("2_5tbt8")
 region_rect = Rect2(2163, 3087, 1273, 472)
 
-[node name="LoseUI" type="Control"]
-texture_filter = 1
-layout_mode = 3
+[node name="LoseUI" type="CanvasLayer" node_paths=PackedStringArray("RestartButton", "TitleLabel")]
+script = ExtResource("1_xwhmm")
+RestartButton = NodePath("ButtonContainer/VBoxContainer/restart")
+TitleLabel = NodePath("Game Over")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.5882353)
+z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-texture_filter = 1
-clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-layout_mode = 2
 texture = ExtResource("1_uuboj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="ButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1180, 500)
-layout_mode = 2
+[node name="ButtonContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 1.0
+anchor_right = 0.48400003
+anchor_bottom = 1.0
+offset_left = -250.28003
+offset_top = -441.0
+offset_right = -0.2800293
+offset_bottom = -251.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 10
 
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/ButtonContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.053000003
-anchor_right = 0.93100005
-anchor_bottom = 1.192
-offset_left = 352.46
-offset_top = 295.0
-offset_right = -383.58008
-offset_bottom = -40.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 30
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
+alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="quit" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="MainMenu" type="Button" parent="ButtonContainer/VBoxContainer"]
 process_mode = 2
-custom_minimum_size = Vector2(200, 80)
+custom_minimum_size = Vector2(250, 80)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_p2dos")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_uuboj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xwhmm")
-text = "QUIT"
-script = ExtResource("6_ffctu")
+text = "MAIN MENU"
+script = ExtResource("5_xwhmm")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="restart" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="restart" type="Button" parent="ButtonContainer/VBoxContainer"]
 process_mode = 3
 visibility_layer = 2
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.67058825, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_p2dos")
 theme_override_font_sizes/font_size = 30
@@ -120,36 +89,21 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_74x7w")
 text = "RESTART"
 script = ExtResource("7_k4pwf")
 
-[node name="seperation" type="Control" parent="MarginContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(10, 200)
-layout_mode = 2
-
 [node name="Game Over" type="Label" parent="."]
-layout_mode = 1
+modulate = Color(0.7582507, 0.9657889, 1.540184e-06, 1)
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.35200003
-offset_left = 552.0
-offset_top = 180.0
-offset_right = -543.0
-offset_bottom = -20.160034
-theme_override_colors/font_color = Color(0.09411765, 1, 1, 1)
+anchor_left = 0.5
+anchor_top = 0.21900001
+anchor_right = 0.5
+anchor_bottom = 0.21900001
+offset_left = -635.0
+offset_top = -75.52002
+offset_right = 575.0
+offset_bottom = 383.47998
 theme_override_fonts/font = ExtResource("8_8m1s4")
 theme_override_font_sizes/font_size = 150
-text = "Game Over"
-horizontal_alignment = 1
+text = "Game Over
 
-[node name="Scores" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.35200003
-offset_left = 552.0
-offset_top = 478.0
-offset_right = -543.0
-offset_bottom = 277.83997
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_8m1s4")
-theme_override_font_sizes/font_size = 70
-text = "Total Scores："
+Skill Issiue?"
+horizontal_alignment = 1
+vertical_alignment = 1

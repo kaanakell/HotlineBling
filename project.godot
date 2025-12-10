@@ -15,6 +15,14 @@ run/main_scene="uid://uyy7fprbbp5"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicManager="*res://Scripts/GDScripts/music_manager.gd"
+
+[debug]
+
+shapes/navigation/3d/geometry_edge_color=Color(0.5019608, 1, 1, 0.0627451)
+
 [display]
 
 window/size/viewport_width=1920
