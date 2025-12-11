@@ -113,7 +113,15 @@ public partial class ShotgunWeapon : BaseWeapon
 			if (rayData.HitEntity != null)
 			{
 				result.Hit = true;
-				if (rayData.HitEntity is Enemy e) e.ApplyDamage(Damage);
+
+				if (rayData.HitEntity is Enemy e)
+				{
+					e.ApplyDamage(Damage);
+				}
+				else if (rayData.HitEntity.GetParent() is Enemy parentE)
+				{
+					parentE.ApplyDamage(Damage);
+				}
 			}
 		}
 
@@ -133,7 +141,7 @@ public partial class KatanaWeapon : BaseWeapon
 		Damage = 100f;
 		FireRate = 2.5f;
 		MagazineSize = 0;
-		Range = 90f;
+		Range = 50f;
 		ScoreMultiplier = 2.0f;
 		WeaponSprite = GD.Load<Texture2D>("res://UI pack/Sprites/Weapons/Katana_Texture.tres");
 	}
@@ -147,7 +155,7 @@ public partial class CrowbarWeapon : BaseWeapon
 		Damage = 55f;
 		FireRate = 5.0f;
 		MagazineSize = 0;
-		Range = 70f;
+		Range = 40f;
 		ScoreMultiplier = 2.5f;
 		WeaponSprite = GD.Load<Texture2D>("res://UI pack/Sprites/Weapons/Crowbar_Texture.tres");
 	}

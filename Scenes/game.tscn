@@ -49,6 +49,8 @@
 [ext_resource type="PackedScene" uid="uid://cn4qxld8prynl" path="res://Scenes/PauseMenu.tscn" id="41_bu0y5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nqk4g"]
+vertices = PackedVector2Array(1181, 1028, 1260, 1035, 996, 1035, 1021, 1028, 1460, 740, 1548, 708, 1596, 708, 1596, 827.5, 1565, 827.5, 1770, 641, 1803, 651, 1604, 651, 1653, 641, 1152.6484, 593.40625, 1152, 594.0625, 1152, 576, 1788, 708, 1788, 773.25, 1779.3672, 764.6172, 1779.3672, 813.3828, 1788, 804.75, 1788, 1035, 1603, 1035, 1580.0391, 1035, 1582.1875, 1032.8516, 1523.8125, 1032.8516, 1525.9609, 1035, 1508.75, 1035, 1751.8594, 819.35156, 1753.7031, 812.4531, 1754.6328, 813.3828, 1094, 851, 1180, 811, 1180, 884, 1021, 924, 1180, 773, 1094, 793, 1116, 740, 1180, 212, 1180, 324, 1164, 318, 1164, 223, 996, 212, 1010.5, 223, 996, 443, 1010.5, 318, 1460, 556, 1548, 588, 1803, 468, 1770, 549.5, 1772, 468, 996, 740, 1180, 500, 1180, 592.5078, 1168, 589.28906, 1100, 500, 1198, 617.3672, 1196.5625, 612, 1300, 612, 1060.5, 576, 1767, 816.71875, 1757, 1035, 1757, 952, 1653, 570, 1604, 588, 1649, 570, 1586, 1018.6328, 1603, 952, 1586, 1009.3672, 1582.1875, 995.14844, 1569.8516, 982.8125, 1579.5, 938, 1520, 1018.6328, 1508.75, 884.5, 1520, 1009.3672, 1523.8125, 995.14844, 1536.1484, 982.8125, 1523.6328, 884.5, 1564, 884, 1553, 978.2969, 1524, 884, 1059, 443, 1767.0391, 761.28906, 1764.3672, 758.6172, 1260, 884, 1181, 924, 1025, 851, 1025, 793, 1076, 740, 1236, 212, 1468.7969, 212, 1468.7969, 213, 1452, 284, 1412, 283, 1516, 213, 1516, 284, 1572, 340, 1572, 273, 1574, 273, 1574, 373.5, 1772, 412, 1732, 411.5, 1658, 373.5, 1658, 372, 1736, 372, 1773, 410.5, 1773, 412, 1736, 364, 1855, 364, 1883, 410.5, 1730, 286, 1730, 289, 1658, 289, 1658, 273, 1692, 273, 1692, 213, 1883, 213, 1855, 286, 1756, 494, 1732, 468, 1396, 411.5, 1396, 340, 1412, 340, 1309, 283, 1309, 284, 1308, 284, 1493, 532, 1548, 532, 1548, 548, 1756, 549.5, 1659.5, 494, 1659.5, 493.5, 1604, 468, 1604.5, 493.5, 1604, 548, 1604.5, 562.5, 1603.5, 587, 1649, 562.5, 1603.5, 588, 1548.5, 587, 1548.5, 588, 1393, 556, 1393, 492, 1493, 468, 1265, 492, 1265, 556, 1236, 556, 1236, 363, 1180, 363, 1180, 443, 1100.5, 443, 1100.5, 444, 1100, 444, 1300, 557, 1340, 557, 1340, 612, 1404, 612, 1404, 681.5, 1116.5, 681.5, 1183.3516, 660.59375, 1116.5, 684, 1116, 684, 1180, 740, 1235, 773, 1235, 772, 1236, 772, 1235.25, 811, 1565, 828, 1564, 828, 1579.5, 884, 1652.5, 938, 1652.5, 935.75, 1677, 935.75, 1700, 774.6328, 1677, 870.25, 1652.5, 870.25, 1652.5, 860, 1700, 763.3672, 1652, 860, 1652, 708, 1703.1406, 751.64844, 1523.6328, 884, 1524, 828, 1523.6328, 828, 1523.6328, 827.5, 1508.75, 827.5, 1508.75, 826.75, 1455.5, 826.75, 1455.5, 751, 1330.5, 829, 1452, 829, 1452, 1035, 1403, 1035, 1403, 1052, 1364, 1052, 1364, 1036, 1363, 1035, 1363, 1036, 1316, 1035, 1316, 826.6328, 1330.5, 751, 1260, 826.6328, 1260, 827.5, 1236, 827.5, 1236, 812, 1235.25, 812, 1076, 684, 1075, 684, 1075, 683, 1152.6484, 660.59375, 1168, 664.71094, 996, 683, 996, 500, 1060, 500, 1060.5, 655.5, 1060, 444, 1059, 444, 1198, 636.6328, 1452, 340, 1741.3516, 829.8594, 1727, 833.7031, 1753.9688, 755.8125, 1752.8594, 751.64844, 1742.3516, 741.1406, 1728, 737.2969, 1713.6484, 741.1406, 1308, 468, 1194.5938, 649.35156, 1712.6484, 829.8594, 1702.5625, 784.21875, 1702.1406, 784.64844, 1699, 796.3672, 1699, 807.6328, 1702.1406, 819.35156, 1236, 740, 1236, 324, 1147.5625, 655.5, 564, 651, 671.25, 650, 830.75, 649.5, 881.25, 649.5, 924, 651, 371, 703, 356, 747, 300, 747, 189.6875, 746.5, 189.6875, 691.5, 300, 692, 620.75, 650, 791.25, 950.5, 828, 965, 762, 965, 740.75, 950.5, 281, 992, 281, 899.75, 299, 955, 299, 1035, 356, 916, 371, 847, 371, 939, 356, 955, 378.5, 749, 378.5, 799, 849.6875, 506.5, 849.6875, 451.5, 871, 438.25, 924, 438.25, 881.25, 596.5, 465.5, 798, 465.5, 748, 508, 764, 508, 916, 469, 847, 762, 1031, 753.25, 1026.75, 753.25, 965.25, 704.5, 949, 707.5, 949, 567.75, 965.25, 671.25, 949.5, 36, 1035, 49.5, 992, 36, 820.5, 49.5, 899.75, 828, 869, 791.25, 897.5, 752.5, 869, 752.5, 870, 740.75, 897.5, 655.5, 870, 508, 284, 508, 484, 460.6875, 475.5, 460.6875, 420.5, 80.75, 820.5, 80.75, 858.5, 131.25, 858.5, 170.75, 859.5, 469, 703, 508, 524, 508, 708, 469, 606, 564, 523, 620.75, 597, 315, 258, 364, 212, 378.5, 212, 378.5, 258, 355.5, 443, 435.5, 258, 435.5, 212, 508, 212, 508, 244, 564, 244, 564, 212, 568, 212, 568, 248, 662.5, 248, 662.5, 247.75, 722.25, 247.75, 746.5, 329, 722.25, 212, 746.5, 212, 843.5, 329, 843.5, 328, 924, 328, 924, 331, 861, 331, 861, 332, 860, 332, 820, 388, 860, 388, 800.3125, 451.5, 795.5, 439, 820, 332, 818, 332, 818, 331, 509.5, 283.75, 509.5, 284, 565.5, 484, 565.5, 433, 601, 433, 601, 438.75, 661, 438.75, 661, 439.25, 650.3125, 451.5, 701, 439.25, 701, 482, 699.6875, 482, 699.6875, 451.5, 650.3125, 506.5, 673.5, 506.5, 673.5, 540, 674, 540, 674, 574.5, 671.25, 597, 701, 574.5, 701, 613, 769, 613, 769, 573, 800, 573, 830.75, 596.5, 800, 489, 770.5, 489, 770.5, 479, 769, 479, 769, 439, 795.5, 389, 749, 389, 749, 388, 861, 388, 861, 389, 871, 389, 509, 523, 509, 524, 372, 606, 372, 637, 371, 637, 828, 708, 828, 762.5, 508.5, 762.5, 508.5, 764, 408.5, 748, 408.5, 749, 435.5, 799, 435.5, 798, 564, 916, 564, 820, 566.5, 820, 566.5, 869, 655.5, 869, 620.75, 896.5, 740.75, 899, 707.5, 899, 704.5, 899, 671.25, 896.5, 671.25, 899, 620.75, 949.5, 469, 939, 563.75, 955, 508, 955, 300, 762, 172, 762, 140.3125, 746.5, 172, 806.5, 170.75, 806.5, 132, 762, 221.25, 859.5, 221.25, 821, 300, 821, 671.25, 949, 740.75, 949, 564, 956, 828, 1031, 828, 1035, 564, 1035, 567.75, 1026.75, 563.75, 956, 508, 1035, 494.5, 1035, 494.5, 1018, 437.5, 1018, 437.5, 1052, 405.5, 1052, 405.5, 1019, 356, 1019, 131.25, 820.5, 132, 820.5, 36, 762, 36, 567, 124.5, 567, 141.3125, 597.5, 140.3125, 691.5, 124.5, 479, 100, 479, 100, 444, 139.5, 443, 99, 444, 99, 443, 100.6875, 416.5, 148, 372, 36, 443, 36, 289.25, 40, 289.25, 40, 343, 92, 343, 92, 361.5, 51.3125, 361.5, 51.3125, 416.5, 100.6875, 372, 148, 316, 108, 316, 108, 289.25, 122.75, 289.25, 122.75, 227.75, 36, 227.75, 36, 212, 147, 212, 147, 269, 220, 269, 220, 443, 139.5, 500, 160, 500, 160, 542.5, 141.3125, 542.5, 190.6875, 597.5, 190.6875, 553, 205, 553, 205, 575, 300, 575, 356, 444, 355.5, 444, 380.6875, 420.5, 276, 443, 276, 258, 315, 212, 324, 212, 324, 164, 364, 164, 800.3125, 506.5, 300, 916, 380.6875, 475.5, 565.5, 283.75, 565.5, 331, 356, 692)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 23, 24), PackedInt32Array(25, 26, 27), PackedInt32Array(28, 29, 30), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(35, 32, 31, 36, 37), PackedInt32Array(38, 39, 40, 41), PackedInt32Array(42, 38, 41, 43), PackedInt32Array(44, 42, 43, 45), PackedInt32Array(5, 4, 46, 47), PackedInt32Array(48, 10, 9, 49, 50), PackedInt32Array(3, 2, 51, 34), PackedInt32Array(52, 53, 54, 15, 55), PackedInt32Array(56, 57, 58), PackedInt32Array(54, 13, 15), PackedInt32Array(55, 15, 59), PackedInt32Array(60, 19, 21, 61, 62), PackedInt32Array(63, 12, 11, 64, 65), PackedInt32Array(22, 24, 66), PackedInt32Array(67, 22, 66, 68), PackedInt32Array(67, 68, 69), PackedInt32Array(67, 69, 70, 71), PackedInt32Array(72, 25, 27), PackedInt32Array(72, 27, 73, 74), PackedInt32Array(75, 74, 73), PackedInt32Array(76, 75, 73, 77), PackedInt32Array(78, 71, 79, 76, 77, 80), PackedInt32Array(81, 44, 45, 40), PackedInt32Array(16, 18, 82, 83), PackedInt32Array(84, 1, 0, 85), PackedInt32Array(33, 84, 85, 34), PackedInt32Array(86, 31, 34), PackedInt32Array(86, 34, 51, 87), PackedInt32Array(87, 51, 88, 36), PackedInt32Array(89, 90, 91, 92, 93), PackedInt32Array(91, 94, 95, 92), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103, 104, 105, 106), PackedInt32Array(105, 104, 107, 108, 109), PackedInt32Array(110, 111, 112, 113, 114), PackedInt32Array(110, 114, 115, 116, 117), PackedInt32Array(117, 116, 109, 108), PackedInt32Array(100, 50, 118, 119, 101), PackedInt32Array(101, 120, 121, 122, 99), PackedInt32Array(123, 124, 125), PackedInt32Array(126, 127, 128, 46), PackedInt32Array(49, 129, 118, 50), PackedInt32Array(119, 118, 130, 131), PackedInt32Array(132, 119, 131, 133), PackedInt32Array(134, 132, 133, 135), PackedInt32Array(136, 135, 137, 65, 64, 138), PackedInt32Array(139, 140, 47, 46, 128), PackedInt32Array(126, 46, 141, 142, 143), PackedInt32Array(144, 145, 146, 147), PackedInt32Array(148, 149, 150), PackedInt32Array(150, 151, 152), PackedInt32Array(58, 153, 154, 155), PackedInt32Array(155, 156, 157, 158, 159), PackedInt32Array(158, 160, 161), PackedInt32Array(37, 162, 35), PackedInt32Array(163, 164, 165, 166), PackedInt32Array(8, 167, 168, 4), PackedInt32Array(78, 169, 71), PackedInt32Array(170, 171, 172), PackedInt32Array(173, 174, 175, 176, 177), PackedInt32Array(176, 178, 179, 180, 177), PackedInt32Array(77, 181, 80), PackedInt32Array(182, 183, 184), PackedInt32Array(184, 185, 186), PackedInt32Array(186, 187, 188, 4), PackedInt32Array(189, 190, 191, 192), PackedInt32Array(192, 193, 194, 195), PackedInt32Array(189, 192, 195, 196), PackedInt32Array(195, 197, 196), PackedInt32Array(189, 196, 198, 199), PackedInt32Array(200, 189, 199), PackedInt32Array(201, 202, 203, 204), PackedInt32Array(200, 204, 205, 166, 165), PackedInt32Array(158, 206, 207, 208, 209, 210), PackedInt32Array(211, 212, 213, 59, 214), PackedInt32Array(215, 216, 81, 40, 39), PackedInt32Array(139, 128, 134, 135, 136), PackedInt32Array(217, 56, 58), PackedInt32Array(218, 96, 99), PackedInt32Array(28, 30, 60, 62), PackedInt32Array(219, 28, 62), PackedInt32Array(220, 219, 62), PackedInt32Array(16, 83, 221, 222), PackedInt32Array(16, 222, 223), PackedInt32Array(179, 16, 223, 224), PackedInt32Array(179, 224, 225), PackedInt32Array(179, 225, 180), PackedInt32Array(226, 143, 142, 144), PackedInt32Array(226, 144, 147, 125), PackedInt32Array(200, 199, 201, 204), PackedInt32Array(227, 217, 58), PackedInt32Array(174, 228, 220, 62, 172), PackedInt32Array(173, 229, 230), PackedInt32Array(174, 173, 230, 231), PackedInt32Array(174, 231, 232), PackedInt32Array(174, 232, 233), PackedInt32Array(174, 233, 228), PackedInt32Array(172, 62, 67, 170), PackedInt32Array(71, 170, 67), PackedInt32Array(71, 70, 79), PackedInt32Array(168, 78, 80, 182), PackedInt32Array(4, 168, 182, 184), PackedInt32Array(4, 184, 186), PackedInt32Array(234, 4, 188, 200), PackedInt32Array(165, 234, 200), PackedInt32Array(163, 166, 32, 35), PackedInt32Array(161, 37, 36, 88, 206), PackedInt32Array(158, 161, 206), PackedInt32Array(125, 147, 148, 235), PackedInt32Array(214, 236, 209, 208, 211), PackedInt32Array(215, 39, 235, 148), PackedInt32Array(215, 152, 55, 59, 213), PackedInt32Array(99, 102, 101), PackedInt32Array(218, 99, 122), PackedInt32Array(92, 218, 122, 93), PackedInt32Array(89, 93, 123), PackedInt32Array(235, 89, 123, 125), PackedInt32Array(215, 148, 150), PackedInt32Array(215, 150, 152), PackedInt32Array(159, 227, 58, 155), PackedInt32Array(158, 210, 159), PackedInt32Array(237, 238, 239, 240, 241), PackedInt32Array(242, 243, 244, 245, 246, 247), PackedInt32Array(248, 238, 237), PackedInt32Array(249, 250, 251, 252), PackedInt32Array(253, 254, 255, 256), PackedInt32Array(257, 258, 259, 260), PackedInt32Array(261, 262, 258, 257, 243, 242), PackedInt32Array(263, 264, 265, 266, 241, 267), PackedInt32Array(268, 269, 270, 271, 272), PackedInt32Array(251, 273, 274, 275), PackedInt32Array(276, 277, 252, 251, 275, 278, 279), PackedInt32Array(253, 256, 280, 281), PackedInt32Array(281, 280, 282, 283), PackedInt32Array(284, 250, 249, 285), PackedInt32Array(286, 284, 285, 287), PackedInt32Array(287, 285, 288, 289), PackedInt32Array(290, 291, 292, 293), PackedInt32Array(283, 282, 294, 295), PackedInt32Array(254, 283, 295, 296, 297), PackedInt32Array(298, 299, 300, 269), PackedInt32Array(299, 298, 301), PackedInt32Array(248, 237, 302, 303), PackedInt32Array(304, 305, 306, 307, 308), PackedInt32Array(309, 310, 311, 312), PackedInt32Array(313, 314, 315, 316), PackedInt32Array(317, 318, 319, 320), PackedInt32Array(319, 321, 322, 320), PackedInt32Array(323, 324, 325, 326, 327), PackedInt32Array(327, 328, 329, 323), PackedInt32Array(330, 329, 331, 332, 333), PackedInt32Array(329, 330, 334, 323), PackedInt32Array(334, 335, 336, 323), PackedInt32Array(337, 338, 290, 312), PackedInt32Array(339, 340, 341, 342), PackedInt32Array(342, 343, 344, 345), PackedInt32Array(346, 347, 348, 349), PackedInt32Array(344, 346, 349, 345), PackedInt32Array(350, 351, 352, 302), PackedInt32Array(352, 353, 354), PackedInt32Array(355, 354, 356, 357, 238), PackedInt32Array(358, 359, 360, 361), PackedInt32Array(362, 363, 364, 333, 332), PackedInt32Array(364, 365, 366, 333), PackedInt32Array(367, 368, 369, 330), PackedInt32Array(332, 331, 370, 371, 264), PackedInt32Array(371, 372, 265, 264), PackedInt32Array(373, 374, 299, 292, 291), PackedInt32Array(375, 376, 377), PackedInt32Array(300, 378, 379, 380, 269), PackedInt32Array(380, 381, 270, 269), PackedInt32Array(242, 298, 269, 382), PackedInt32Array(382, 383, 261, 242), PackedInt32Array(384, 385, 268), PackedInt32Array(386, 387, 388, 389), PackedInt32Array(389, 390, 289, 391, 386), PackedInt32Array(288, 392, 393, 289), PackedInt32Array(393, 277, 276, 394), PackedInt32Array(289, 393, 394, 395), PackedInt32Array(394, 396, 395), PackedInt32Array(289, 395, 391), PackedInt32Array(386, 391, 397), PackedInt32Array(398, 271, 386, 397, 399, 400), PackedInt32Array(271, 398, 272), PackedInt32Array(268, 272, 258, 384), PackedInt32Array(262, 384, 258), PackedInt32Array(245, 244, 401, 402, 403), PackedInt32Array(403, 402, 404, 405, 406), PackedInt32Array(407, 408, 409, 254), PackedInt32Array(279, 410, 276), PackedInt32Array(277, 411, 252), PackedInt32Array(397, 279, 278, 412, 399), PackedInt32Array(273, 413, 414, 415), PackedInt32Array(274, 273, 415, 416), PackedInt32Array(416, 415, 412, 278), PackedInt32Array(412, 417, 399), PackedInt32Array(400, 418, 419, 420), PackedInt32Array(421, 422, 423, 424), PackedInt32Array(421, 424, 425, 260, 259, 398), PackedInt32Array(296, 426, 427), PackedInt32Array(406, 428, 429, 430, 431, 432), PackedInt32Array(433, 434, 435, 436), PackedInt32Array(436, 435, 437, 438, 439, 440), PackedInt32Array(441, 442, 443, 444), PackedInt32Array(444, 445, 446, 447), PackedInt32Array(441, 444, 447, 448), PackedInt32Array(438, 441, 448, 439), PackedInt32Array(439, 449, 440), PackedInt32Array(450, 451, 452, 453), PackedInt32Array(454, 455, 456, 457), PackedInt32Array(454, 457, 458, 453), PackedInt32Array(450, 453, 458, 459), PackedInt32Array(450, 459, 460, 440), PackedInt32Array(440, 460, 436), PackedInt32Array(433, 436, 461, 430), PackedInt32Array(461, 462, 463, 464), PackedInt32Array(430, 461, 464, 431), PackedInt32Array(465, 466, 467, 468), PackedInt32Array(468, 469, 247, 465), PackedInt32Array(470, 471, 308, 309, 312, 290, 472), PackedInt32Array(308, 473, 474, 304), PackedInt32Array(304, 475, 476), PackedInt32Array(476, 477, 478, 305), PackedInt32Array(361, 239, 238, 358), PackedInt32Array(241, 240, 267), PackedInt32Array(479, 263, 267, 361, 360), PackedInt32Array(333, 367, 330), PackedInt32Array(398, 400, 420, 421), PackedInt32Array(304, 476, 305), PackedInt32Array(308, 307, 309), PackedInt32Array(480, 257, 260, 255), PackedInt32Array(480, 255, 254, 409), PackedInt32Array(339, 342, 345, 350, 302), PackedInt32Array(290, 293, 472), PackedInt32Array(362, 332, 479, 360), PackedInt32Array(357, 358, 238), PackedInt32Array(354, 355, 303, 302, 352), PackedInt32Array(291, 339, 302, 373), PackedInt32Array(292, 299, 301, 375, 481), PackedInt32Array(312, 313, 316, 482, 337), PackedInt32Array(316, 317, 320, 483, 482), PackedInt32Array(431, 465, 247, 246), PackedInt32Array(297, 407, 254), PackedInt32Array(405, 297, 296, 427), PackedInt32Array(405, 427, 406), PackedInt32Array(320, 323, 336, 483), PackedInt32Array(484, 470, 472, 481, 375), PackedInt32Array(484, 375, 377), PackedInt32Array(484, 377, 242), PackedInt32Array(247, 484, 242), PackedInt32Array(431, 246, 432), PackedInt32Array(406, 432, 403)])
 agent_radius = 20.0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6a4tp"]
@@ -6676,7 +6678,7 @@ position = Vector2(87.5, 96)
 shape = SubResource("RectangleShape2D_h4fw4")
 
 [node name="area2" type="CollisionShape2D" parent="NavigationRegion2D/GameWorld/Layer1/walls"]
-position = Vector2(744.4005, 96.49999)
+position = Vector2(428, 1172)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_ldgsr")
 
@@ -6781,6 +6783,7 @@ position = Vector2(951.5, 431)
 shape = SubResource("RectangleShape2D_sjh24")
 
 [node name="floor_exit" type="Area2D" parent="NavigationRegion2D/GameWorld/Layer1" node_paths=PackedStringArray("game_manager")]
+collision_mask = 3
 script = ExtResource("7_6a4tp")
 game_manager = NodePath("../../../../GameManager")
 
@@ -7099,50 +7102,56 @@ position = Vector2(-158, 0)
 [node name="Point2" type="Node2D" parent="NavigationRegion2D/GameWorld/Layer1/PatrolPath_7"]
 position = Vector2(137, 0)
 
-[node name="EnemyContainerForLayer1" type="Node" parent="NavigationRegion2D/GameWorld/Layer1"]
+[node name="EnemyContainerForLayer1" type="Node2D" parent="NavigationRegion2D/GameWorld/Layer1"]
 
 [node name="Enemy" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
 position = Vector2(536, 726)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_1/Point1"), NodePath("../../PatrolPath_1/Point2")]
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy2" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
 position = Vector2(42, 1009.00006)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_7/Point1"), NodePath("../../PatrolPath_7/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 15.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy3" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(594, 954)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy4" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(638, 953.00006)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 FaceLeftOnSpawn = true
 
 [node name="Enemy5" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(796, 868)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
@@ -7150,9 +7159,11 @@ FaceLeftOnSpawn = true
 position = Vector2(45, 747)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_2/Point1"), NodePath("../../PatrolPath_2/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy7" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
@@ -7160,25 +7171,29 @@ position = Vector2(270, 608)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_3/Point1"), NodePath("../../PatrolPath_3/Point2")]
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
 [node name="Enemy8" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(571, 633)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy9" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(614, 631)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
@@ -7186,24 +7201,29 @@ FaceLeftOnSpawn = true
 position = Vector2(903, 602)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_4/Point1"), NodePath("../../PatrolPath_4/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy11" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(359, 509)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy12" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(397, 509)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 200.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 FaceLeftOnSpawn = true
 
@@ -7211,60 +7231,91 @@ FaceLeftOnSpawn = true
 position = Vector2(200, 432)
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_5/Point1"), NodePath("../../PatrolPath_5/Point2")]
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 
 [node name="Enemy14" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(565, 323)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 
 [node name="Enemy15" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(602, 322)
 AttackType = 1
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 FaceLeftOnSpawn = true
 
 [node name="Enemy16" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(605, 862)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 FaceLeftOnSpawn = true
 
 [node name="Enemy17" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(364, 950)
 AttackType = 1
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 
 [node name="Enemy18" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(303, 260)
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 
 [node name="Enemy19" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(403, 259)
 AttackType = 1
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 FaceLeftOnSpawn = true
 
 [node name="Enemy20" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" instance=ExtResource("3_wowpa")]
 position = Vector2(584, 439)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 
 [node name="Enemy21" parent="NavigationRegion2D/GameWorld/Layer1/EnemyContainerForLayer1" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
@@ -7272,7 +7323,12 @@ position = Vector2(283, 876.00006)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_6/Point1"), NodePath("../../PatrolPath_6/Point2")]
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 SpecificSpriteFrames = ExtResource("28_htg8p")
 
 [node name="Layer2" type="TileMapLayer" parent="NavigationRegion2D/GameWorld"]
@@ -7546,55 +7602,63 @@ gizmo_extents = 35.0
 [node name="FinalObjective" type="Area2D" parent="NavigationRegion2D/GameWorld/Layer2"]
 position = Vector2(344, 163)
 scale = Vector2(5, 1)
+collision_mask = 3
 script = ExtResource("36_6a4tp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/GameWorld/Layer2/FinalObjective"]
 shape = SubResource("RectangleShape2D_sfx3s")
 
-[node name="EnemyContainerForLayer2" type="Node" parent="NavigationRegion2D/GameWorld/Layer2"]
+[node name="EnemyContainerForLayer2" type="Node2D" parent="NavigationRegion2D/GameWorld/Layer2"]
+position = Vector2(-963, 0)
 
 [node name="Enemy" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
 position = Vector2(1009, 1018)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_8/Point1"), NodePath("../../PatrolPath_8/Point2")]
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy2" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
 position = Vector2(1314, 832.00006)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_9/Point1"), NodePath("../../PatrolPath_9/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 15.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy3" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1008, 664)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy4" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1395, 669)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 FaceLeftOnSpawn = true
 
 [node name="Enemy5" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(997, 505.00003)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
@@ -7602,9 +7666,11 @@ FaceLeftOnSpawn = true
 position = Vector2(1001, 425)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_10/Point1"), NodePath("../../PatrolPath_10/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy7" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
@@ -7612,25 +7678,29 @@ position = Vector2(1324, 582)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_11/Point1"), NodePath("../../PatrolPath_11/Point2")]
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
 [node name="Enemy8" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1537, 936)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy9" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1752, 852)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 FaceLeftOnSpawn = true
 
@@ -7638,24 +7708,29 @@ FaceLeftOnSpawn = true
 position = Vector2(1776.0001, 638)
 Behavior = 1
 PatrolPoints = [NodePath("../../PatrolPath_12/Point1"), NodePath("../../PatrolPath_12/Point2")]
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 
 [node name="Enemy11" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1412, 395)
 AttackType = 1
-MaxHealth = 110.0
 MoveSpeed = 70.0
+VisionRange = 300.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 0.5
 SpecificSpriteFrames = ExtResource("24_32sfa")
 
 [node name="Enemy12" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1160, 423)
-MaxHealth = 120.0
-MoveSpeed = 50.0
+MaxHealth = 50.0
+VisionRange = 400.0
+FieldOfView = 120.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("25_titue")
 FaceLeftOnSpawn = true
 
@@ -7663,61 +7738,92 @@ FaceLeftOnSpawn = true
 position = Vector2(1505, 237)
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_13/Point1"), NodePath("../../PatrolPath_13/Point2")]
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 
 [node name="Enemy14" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1256, 209)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 
 [node name="Enemy15" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1352, 206)
 AttackType = 1
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 FaceLeftOnSpawn = true
 
 [node name="Enemy16" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1658, 374)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 FaceLeftOnSpawn = true
 
 [node name="Enemy17" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1712, 228.00006)
 AttackType = 1
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 
 [node name="Enemy18" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1844, 229)
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 FaceLeftOnSpawn = true
 
 [node name="Enemy19" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1442, 889)
 AttackType = 1
-MaxHealth = 60.0
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 MeleeRange = 25.0
 SpecificSpriteFrames = ExtResource("41_6a4tp")
 FaceLeftOnSpawn = true
 
 [node name="Enemy20" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" instance=ExtResource("3_wowpa")]
 position = Vector2(1565, 724)
-MaxHealth = 60.0
+MaxHealth = 200.0
+MoveSpeed = 60.0
+VisionRange = 300.0
+FieldOfView = 70.0
 BulletPrefab = ExtResource("8_6a4tp")
-MeleeRange = 25.0
+MeleeRange = 35.0
 SpecificSpriteFrames = ExtResource("27_tt7mg")
 
 [node name="Enemy21" parent="NavigationRegion2D/GameWorld/Layer2/EnemyContainerForLayer2" node_paths=PackedStringArray("PatrolPoints") instance=ExtResource("3_wowpa")]
@@ -7725,7 +7831,12 @@ position = Vector2(1162, 783.00006)
 Behavior = 1
 AttackType = 1
 PatrolPoints = [NodePath("../../PatrolPath_14/Point1"), NodePath("../../PatrolPath_14/Point2")]
+MaxHealth = 40.0
+MoveSpeed = 5.0
+VisionRange = 600.0
+FieldOfView = 45.0
 BulletPrefab = ExtResource("8_6a4tp")
+AttackCooldown = 2.0
 SpecificSpriteFrames = ExtResource("28_htg8p")
 
 [node name="PatrolPath_8" type="Node2D" parent="NavigationRegion2D/GameWorld/Layer2"]
@@ -7805,15 +7916,12 @@ player = NodePath("../PlayerContainer/PlayerController")
 
 [node name="WeaponManager" type="Node" parent="Managers/WeaponSystem"]
 script = ExtResource("4_1phco")
+RotationInterval = 10.0
 
 [node name="ScoreSystem" type="Node" parent="Managers"]
 
 [node name="ScoreManager" type="Node" parent="Managers/ScoreSystem"]
 script = ExtResource("7_ewbju")
-
-[node name="SpawnSystem" type="Node" parent="Managers"]
-
-[node name="SpawnManager" type="Node" parent="Managers/SpawnSystem"]
 
 [node name="PlayerContainer" type="Node" parent="."]
 

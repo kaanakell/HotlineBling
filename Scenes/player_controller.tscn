@@ -1,21 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs18o7bltrkk6"]
+[gd_scene load_steps=7 format=3 uid="uid://bs18o7bltrkk6"]
 
 [ext_resource type="Script" uid="uid://cwjitqs7ufwmd" path="res://Scripts/C# Scripts/PlayerController.cs" id="1_5ur5x"]
 [ext_resource type="PackedScene" uid="uid://btydbwolkwib3" path="res://Scenes/Lose.tscn" id="2_bnokr"]
 [ext_resource type="PackedScene" uid="uid://chkfdb8ag0qpi" path="res://Scenes/Win.tscn" id="3_1esxm"]
 [ext_resource type="SpriteFrames" uid="uid://bti21aj483p5j" path="res://UI pack/Sprites/Player/Player.tres" id="4_bnokr"]
+[ext_resource type="Script" uid="uid://yqx6ivnmk6me" path="res://Scripts/C# Scripts/GameCamera.cs" id="5_1esxm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vs120"]
 radius = 7.238098
 height = 26.666656
 
-[node name="PlayerController" type="CharacterBody2D" node_paths=PackedStringArray("WeaponPivot") groups=["player"]]
+[node name="PlayerController" type="CharacterBody2D" node_paths=PackedStringArray("WeaponPivot", "MainCamera") groups=["player"]]
 scale = Vector2(0.75, 0.75)
-collision_mask = 9
+collision_layer = 2
+collision_mask = 45
 script = ExtResource("1_5ur5x")
 WeaponManagerPath = NodePath("../../Managers/WeaponSystem/WeaponManager")
 ScoreManagerPath = NodePath("../../Managers/ScoreSystem/ScoreManager")
 WeaponPivot = NodePath("WeaponPivot")
+MainCamera = NodePath("Camera2D")
 GameOverScene = ExtResource("2_bnokr")
 WinScene = ExtResource("3_1esxm")
 
@@ -29,8 +32,9 @@ sprite_frames = ExtResource("4_bnokr")
 autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(3.5, 3.5)
 position_smoothing_enabled = true
+script = ExtResource("5_1esxm")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
 z_index = 1

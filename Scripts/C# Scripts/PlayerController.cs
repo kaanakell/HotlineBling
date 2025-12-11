@@ -7,6 +7,7 @@ public partial class PlayerController : CharacterBody2D
 	[Export] public NodePath WeaponManagerPath;
 	[Export] public NodePath ScoreManagerPath;
 	[Export] public Node2D WeaponPivot;
+	[Export] public GameCamera MainCamera;
 
 	[ExportCategory("UI Scenes")]
 	[Export] public PackedScene GameOverScene;
@@ -146,6 +147,12 @@ public partial class PlayerController : CharacterBody2D
 
 			PlayAttackAnimation();
 
+			if (MainCamera != null)
+			{
+				float shakeAmount = (_weapon.Name == "Shotgun" || _weapon.Name == "Sniper") ? 0.3f : 0.1f;
+				MainCamera.AddShake(shakeAmount);
+			}
+
 			_scoreManager?.OnShotFired(result.Hit);
 			_fireCooldown = 1f / Mathf.Max(_weapon.FireRate, 0.01f);
 		}
@@ -166,7 +173,7 @@ public partial class PlayerController : CharacterBody2D
 
 		line.ZIndex = 10;
 
-		GetTree().Root.AddChild(line);
+		GetTree().CurrentScene.AddChild(line);
 
 		var tween = CreateTween();
 		tween.TweenProperty(line, "modulate:a", 0.0f, 0.1f);

@@ -98,8 +98,9 @@ public partial class BaseWeapon : Resource, IWeapon
 
 		var query = PhysicsRayQueryParameters2D.Create(from: from, to: from + dir * Range);
 
-		query.CollisionMask = 1;
+		query.CollisionMask = 5;
 		query.CollideWithAreas = true;
+		query.HitFromInside = true;
 
 		if (shooter is CollisionObject2D body)
 		{

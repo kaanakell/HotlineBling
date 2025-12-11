@@ -242,9 +242,23 @@ public partial class Enemy : CharacterBody2D, IEnemy
 		return false;
 	}
 
+	private void FlashDamage()
+	{
+		if (_sprite == null) return;
+
+		Tween tween = CreateTween();
+
+		tween.TweenProperty(_sprite, "modulate", Colors.Red, 0.05f);
+
+		tween.TweenProperty(_sprite, "modulate", Colors.White, 0.05f);
+	}
+
 	public void ApplyDamage(float damage)
 	{
 		_hp -= damage;
+
+		FlashDamage();
+
 		_currentState = State.Chase;
 
 		if (_hp <= 0)
